@@ -166,7 +166,7 @@
   background-color: #E2EB57;
   padding: 3px;
   display: flex;
-  align-items: center;
+  width: fit-content;
 }
 
 .room-info__level-display {
@@ -193,6 +193,31 @@
   font-weight: bolder;
   font-size: 50px;
   margin: 5px 0 0 0;
+}
+
+.room-info__title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.room-info__title {
+  color: white;
+  background-color: black;
+  text-align: center;
+  font-style: italic;
+  margin: 5px 8px;
+  padding: 4px 0;
+}
+
+.room-info__subtitle {
+  color: white;
+  background-color: black;
+  text-align: center;
+  font-style: italic;
+  padding: 2px 36px;
+  margin: 5px 8px 0px 8px;
+
 }
 
 h1 {
