@@ -132,7 +132,6 @@
 
 .console-display__wrapper {
   display: flex;
-  height: 36px;
   align-items: center;
 }
 
