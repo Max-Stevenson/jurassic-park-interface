@@ -1,0 +1,39 @@
+.map-display__system-wrapper {
+  display: flex;
+  align-items: center;
+  background-color: #448149;
+}
+
+.map-display__center-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.map-display__container {
+  width: 500px;
+  border-bottom: 8px solid #438149;
+  border-top: 8px solid #438149;
+  display: flex;
+  height: 500px;
+  justify-content: space-between;
+}
+
+.system-text {
+  max-width: fit-content;
+  background: #438149;
+  color: #ededed;
+  margin: 0 auto;
+}
+
+#sys-one {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  text-align: center;
+}
+
+#sys-four {
+  writing-mode: tb-rl;
+  transform: rotate(-180deg);
+  text-align: center;
+}

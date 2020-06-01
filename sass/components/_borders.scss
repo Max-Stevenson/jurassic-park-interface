@@ -1,0 +1,31 @@
+.outer-edge__light {
+  border-left: solid 1px #585356;
+  border-top: solid 1px #585356;
+  border-right: solid 1px #c8c8c8;
+  border-bottom: solid 1px #c8c8c8;
+  border-radius: 1px;
+  background-color: #797979;
+}
+
+.inner-edge__light {
+  border-bottom: solid 2px #4a4546;
+  border-right: solid 2px #4a4546;
+  border-left: solid 2px #c8c8c8;
+  border-top: solid 2px #c8c8c8;
+  padding: 5px;
+}
+
+.inner-edge__dark {
+  border-bottom: solid 2px #3F3D43;
+  border-right: solid 2px #3F3D43;
+  border-left: solid 2px #A7A8AE;
+  border-top: solid 2px #A7A8AE;
+}
+
+.outer-edge__dark {
+  border-left: solid 1px #302a2a;
+  border-top: solid 1px #302a2a;
+  border-right: solid 1px #c1c2c6;
+  border-bottom: solid 1px #c1c2c6;
+  border-radius: 1px;
+}
