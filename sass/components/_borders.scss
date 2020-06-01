@@ -30,12 +30,17 @@
   border-radius: 1px;
 }
 
-.outer-edge__dark-no-right-edge {
+.inner-edge__light__no-padding {
+  @extend .inner-edge__light;
+  padding: 0px;
+}
+
+.outer-edge__dark__no-right-edge {
   @extend .outer-edge__dark;
   border-right: none;
 }
 
-.outer-edge__light-no-right-edge {
+.outer-edge__light__no-right-edge {
   @extend .outer-edge__light;
   border-right: none;
 }

@@ -11,15 +11,18 @@
 }
 
 .map-display__container {
-  width: 500px;
   border-bottom: 8px solid #438149;
   border-top: 8px solid #438149;
   display: flex;
   height: 500px;
   justify-content: space-between;
+  background-color: black;
+  background-size: 40px 40px;
+  background-image: linear-gradient(to right, white 1px, transparent 1px),
+    linear-gradient(to bottom, white 1px, transparent 1px);
 }
 
-.system-text {
+.map-display__system-status {
   max-width: fit-content;
   background: #438149;
   color: #ededed;
