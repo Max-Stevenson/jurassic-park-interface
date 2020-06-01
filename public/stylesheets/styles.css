@@ -7,7 +7,7 @@ body {
   margin: 0 100px;
 }
 
-.outer-edge__light {
+.outer-edge__light, .outer-edge__light-no-right-edge {
   border-left: solid 1px #585356;
   border-top: solid 1px #585356;
   border-right: solid 1px #c8c8c8;
@@ -31,12 +31,20 @@ body {
   border-top: solid 2px #A7A8AE;
 }
 
-.outer-edge__dark {
+.outer-edge__dark, .outer-edge__dark-no-right-edge {
   border-left: solid 1px #302a2a;
   border-top: solid 1px #302a2a;
   border-right: solid 1px #c1c2c6;
   border-bottom: solid 1px #c1c2c6;
   border-radius: 1px;
+}
+
+.outer-edge__dark-no-right-edge {
+  border-right: none;
+}
+
+.outer-edge__light-no-right-edge {
+  border-right: none;
 }
 
 .control-pannel__button-display {
@@ -59,7 +67,7 @@ body {
 
 .button__depressed {
   width: fit-content;
-  box-shadow: inset 0 0 2px #515151;
+  box-shadow: inset 0 0 2px #4C4C4C;
 }
 
 .map-display__system-wrapper {
