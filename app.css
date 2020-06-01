@@ -277,6 +277,11 @@ body {
   flex-direction: column;
 }
 
+.control-pannel__button-display {
+  display: flex;
+  align-items: center;
+}
+
 h1 {
   max-width: fit-content;
   background: #438149;
@@ -285,14 +290,26 @@ h1 {
 }
 
 .button-display__button {
-  -moz-box-shadow:    inset 0 0 5px #515151;
+  -moz-box-shadow: inset 0 0 5px #515151;
   -webkit-box-shadow: inset 0 0 5px #515151;
-  box-shadow:         inset 0 0 5px #515151;
+  box-shadow: inset 0 0 5px #515151;
   width: fit-content;
 }
 
-.button-display__button__depressed {
-  color: #BFBFBF; 
+.button-text__embossed {
+  color: #bfbfbf;
   text-shadow: 1px 1px 1px #565656;
   padding: 5px;
+  margin: 0;
+}
+
+.button-text__engraved {
+  text-shadow: 1px 1px 0px #616161, 2px 1px 0px #aeb5b5;
+  color: transparent;
+  margin: 0;
+}
+
+.buttons {
+  width: fit-content;
+  box-shadow: inset 0 0 2px #515151;
 }
