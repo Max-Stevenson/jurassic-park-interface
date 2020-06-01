@@ -361,4 +361,21 @@ body {
   padding: 5px;
 }
 
+.video-screen__text-wrapper {
+  background-color: white;
+  border: 2px solid black;
+  padding: 5px;
+}
+
+.video-screen__header {
+  margin: 0;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+.video-screen__info-text {
+  font-style: italic;
+  text-transform: uppercase;
+}
+
 /*# sourceMappingURL=styles.css.map */
