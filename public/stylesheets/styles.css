@@ -92,6 +92,10 @@ body {
   padding: 2px 20px;
 }
 
+#rewind-button {
+  display: flex;
+}
+
 .map-display__system-wrapper {
   display: flex;
   align-items: center;
