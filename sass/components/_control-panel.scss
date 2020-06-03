@@ -8,7 +8,16 @@
   flex-direction: row;
 }
 
+.button-control__bottom {
+  display: flex;
+  flex-direction: row;
+}
+
 .button-control__top > div {
   flex: 1;
   background-color: #9CA193;
+}
+
+.button-control__bottom > div {
+  flex: 1;
 }

@@ -58,12 +58,16 @@ body {
   align-items: center;
 }
 
-.button-text__engraved {
+.button-text__engraved, .button-text__engraved__light {
   text-shadow: 1px 1px 0px #616161, 2px 1px 0px #aeb5b5;
   color: transparent;
   margin: 0;
   text-transform: uppercase;
   text-align: center;
+}
+
+.button-text__engraved__light {
+  text-shadow: 3px 2px 1px #B0B4A9, 1px 1px 0.5px #666C57;
 }
 
 .button-text__embossed {
@@ -406,9 +410,18 @@ body {
   flex-direction: row;
 }
 
+.button-control__bottom {
+  display: flex;
+  flex-direction: row;
+}
+
 .button-control__top > div {
   flex: 1;
   background-color: #9CA193;
+}
+
+.button-control__bottom > div {
+  flex: 1;
 }
 
 /*# sourceMappingURL=styles.css.map */

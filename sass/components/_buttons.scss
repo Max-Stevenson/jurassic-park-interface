@@ -11,6 +11,11 @@
   text-align: center;
 }
 
+.button-text__engraved__light {
+  @extend .button-text__engraved;
+  text-shadow: 3px 2px 1px #B0B4A9, 1px 1px 0.5px #666C57;
+}
+
 .button-text__embossed {
   color: #bfbfbf;
   text-shadow: 1px 1px 1px #565656;
