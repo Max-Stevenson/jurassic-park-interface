@@ -1,0 +1,14 @@
+.control-panel__button-control {
+  display: flex;
+  flex-direction: column;
+}
+
+.button-control__top {
+  display: flex;
+  flex-direction: row;
+}
+
+.button-control__top > div {
+  flex: 1;
+  background-color: #9CA193;
+}
