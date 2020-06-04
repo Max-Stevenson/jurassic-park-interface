@@ -44,3 +44,18 @@
   @extend .outer-edge__light;
   border-right: none;
 }
+
+.outer-edge__console {
+  border-top: solid 1px #6A6767;
+  border-right: solid 1px #B1ABAB;
+  border-bottom: solid 1px #B1ABAB;
+  border-left: solid 1px #6A6767;
+  border-radius: 1px;
+}
+
+.inner-edge__console {
+  border-top: solid 1px #EAE9E9;
+  border-right: solid 1px #A59B9A;
+  border-bottom: solid 1px #A59B9A;
+  border-left: solid 1px #EAE9E9;
+}

@@ -53,6 +53,20 @@ body {
   border-right: none;
 }
 
+.outer-edge__console {
+  border-top: solid 1px #6A6767;
+  border-right: solid 1px #B1ABAB;
+  border-bottom: solid 1px #B1ABAB;
+  border-left: solid 1px #6A6767;
+}
+
+.inner-edge__console {
+  border-top: solid 1px #EAE9E9;
+  border-right: solid 1px #A59B9A;
+  border-bottom: solid 1px #A59B9A;
+  border-left: solid 1px #EAE9E9;
+}
+
 .control-panel__button-display {
   display: flex;
   align-items: center;
@@ -94,6 +108,10 @@ body {
 
 #rewind-button {
   display: flex;
+}
+
+#stop-button {
+  font-size: 11.55px;
 }
 
 .map-display__system-wrapper {
