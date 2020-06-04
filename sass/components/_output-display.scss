@@ -1,0 +1,10 @@
+.output-display__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.output-display-content__wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
