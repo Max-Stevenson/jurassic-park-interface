@@ -7,4 +7,21 @@
   flex: 1;
   display: flex;
   flex-direction: row;
+  padding: 2px 5px;
+  margin: 1px 0px;
+}
+
+.output-display-content__status {
+  text-transform: uppercase;
+  color: white;
+  background-color: #5FD069;
+  font-style: italic;
+  padding: 1px;
+  margin: 0px 5px 0px 0px;
+}
+
+.output-display-content__content {
+  font-weight: 600;
+  margin: 0px;
+  font-style: italic;
 }

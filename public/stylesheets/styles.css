@@ -356,7 +356,7 @@ body {
 }
 
 .control-panel__video-screen {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .video-screen {
@@ -374,7 +374,6 @@ body {
   border-radius: 50%;
   overflow: hidden;
   border: 1px solid black;
-  /* borders on it too */
 }
 
 .video-screen__loading-spinner::before,
@@ -404,12 +403,16 @@ body {
   justify-content: center;
   width: fit-content;
   padding: 5px;
+  margin-bottom: 20px;
 }
 
 .video-screen__text-wrapper {
   background-color: white;
   border: 2px solid black;
   padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .video-screen__header {
@@ -458,6 +461,23 @@ body {
   flex: 1;
   display: flex;
   flex-direction: row;
+  padding: 2px 5px;
+  margin: 1px 0px;
+}
+
+.output-display-content__status {
+  text-transform: uppercase;
+  color: white;
+  background-color: #5FD069;
+  font-style: italic;
+  padding: 1px;
+  margin: 0px 5px 0px 0px;
+}
+
+.output-display-content__content {
+  font-weight: 600;
+  margin: 0px;
+  font-style: italic;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,5 +1,5 @@
 .control-panel__video-screen {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .video-screen {
@@ -16,7 +16,7 @@
   position: relative;
   border-radius: 50%;
   overflow: hidden;
-  border: 1px solid black; /* borders on it too */
+  border: 1px solid black;
 }
 
 .video-screen__loading-spinner::before,
@@ -44,12 +44,16 @@
   justify-content: center;
   width: fit-content;
   padding: 5px;
+  margin-bottom: 20px;
 }
 
 .video-screen__text-wrapper {
   background-color: white;
   border: 2px solid black;
   padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .video-screen__header {
