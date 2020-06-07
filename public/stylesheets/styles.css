@@ -311,6 +311,7 @@ body {
 }
 
 .island-container__wrapper {
+  flex: 1;
   display: flex;
   align-items: center;
 }
@@ -337,7 +338,7 @@ body {
 }
 
 .island-container__outer {
-  width: fit-content;
+  flex: 1;
   border-radius: 1px;
   border-top: 1px solid black;
   border-left: none;
@@ -348,11 +349,11 @@ body {
 
 .island-container__text {
   color: black;
-  width: fit-content;
   background-color: white;
   padding: 8px 48px 8px 48px;
   font-style: italic;
   margin: 0px;
+  text-align: center;
 }
 
 .control-panel__video-screen {
