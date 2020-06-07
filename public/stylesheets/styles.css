@@ -6,7 +6,6 @@
 
 body {
   background: black;
-  margin: 0 100px;
 }
 
 .outer-edge__light, .outer-edge__light__no-right-edge {
@@ -100,18 +99,6 @@ body {
   padding: 5px;
 }
 
-.small-button {
-  padding: 0px 10px;
-}
-
-.large-button {
-  padding: 2px 20px;
-}
-
-#rewind-button {
-  display: flex;
-}
-
 #stop-button {
   font-size: 11.55px;
 }
@@ -160,9 +147,13 @@ body {
 
 #grid-container {
   display: grid;
-  grid-template-rows: auto auto auto auto;
-  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  grid-template-columns: 485px 365px;
   justify-items: stretch;
+}
+
+#outer-container {
+  width: fit-content;
 }
 
 #system-icons {
@@ -176,6 +167,7 @@ body {
 #control-panel {
   display: flex;
   flex-direction: column;
+  grid-area: 1/2/2/3;
 }
 
 #map-display {

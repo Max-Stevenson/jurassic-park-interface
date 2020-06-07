@@ -1,8 +1,12 @@
 #grid-container {
   display: grid;
-  grid-template-rows: auto auto auto auto;
-  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  grid-template-columns: 485px 365px;
   justify-items: stretch;
+}
+
+#outer-container {
+  width: fit-content;
 }
 
 #system-icons {
@@ -16,6 +20,7 @@
 #control-panel {
   display: flex;
   flex-direction: column;
+  grid-area: 1 / 2 / 2 / 3;
 }
 
 #map-display {
