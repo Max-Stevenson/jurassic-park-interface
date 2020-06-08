@@ -11,10 +11,10 @@
 }
 
 .map-display__container {
-  border-bottom: 8px solid #438149;
-  border-top: 8px solid #438149;
+  border-bottom: 10px solid #438149;
+  border-top: 10px solid #438149;
   display: flex;
-  height: 500px;
+  flex: 1;
   justify-content: space-between;
   background-color: black;
   background-size: 40px 40px;
@@ -32,7 +32,24 @@
 #sys-one {
   writing-mode: vertical-rl;
   text-orientation: mixed;
+}
+
+#sys-one, #sys-four {
+  font-size: 38px;
+  padding: 0 8px;
   text-align: center;
+}
+
+#sys-two {
+  padding: 4px 8px 8px 8px;
+}
+
+#sys-three {
+  padding: 8px 8px 4px 8px;
+}
+
+#sys-three, #sys-two {
+  font-size: 26px;
 }
 
 #sys-four {
@@ -40,3 +57,5 @@
   transform: rotate(-180deg);
   text-align: center;
 }
+
+

@@ -23,6 +23,14 @@
   grid-area: 1 / 2 / 2 / 3;
 }
 
-#map-display {
+#map-display__outer {
   grid-area: 1 / 1 / 3 / 2;
+  display: flex;
+  flex-direction: column;
+}
+
+#map-display__inner {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
