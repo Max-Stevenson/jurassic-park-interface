@@ -1,5 +1,8 @@
 .map-display__system-wrapper {
   background-color: #448149;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .map-display__center-section {
@@ -21,14 +24,15 @@
 .map-display__system-status {
   background: #438149;
   color: #ededed;
-  margin: 0 auto;
+  margin: 0;
 }
 
 .map-display__system-status__container {
   display: flex;
   flex: 1;
   justify-content: space-between;
-  border: 10px solid #438149;
+  border-top: 10px solid #438149;
+  border-bottom: 10px solid #438149;
 }
 
 #sys-one {
@@ -36,7 +40,8 @@
   text-orientation: mixed;
 }
 
-#sys-one, #sys-four {
+#sys-one,
+#sys-four {
   font-size: 38px;
 }
 
@@ -48,7 +53,8 @@
   padding: 8px 8px 4px 8px;
 }
 
-#sys-three, #sys-two {
+#sys-three,
+#sys-two {
   font-size: 26px;
 }
 
@@ -56,5 +62,3 @@
   writing-mode: tb-rl;
   transform: rotate(-180deg);
 }
-
-

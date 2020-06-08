@@ -22,6 +22,7 @@ body {
   border-bottom: solid 1px #c8c8c8;
   border-radius: 1px;
   background-color: #797979;
+  height: 100%;
 }
 
 .inner-edge__light, .inner-edge__light__no-padding {
@@ -30,6 +31,7 @@ body {
   border-left: solid 2px #c8c8c8;
   border-top: solid 2px #c8c8c8;
   padding: 5px;
+  height: 100%;
 }
 
 .inner-edge__dark {
@@ -37,6 +39,7 @@ body {
   border-right: solid 2px #3F3D43;
   border-left: solid 2px #A7A8AE;
   border-top: solid 2px #A7A8AE;
+  height: 100%;
 }
 
 .outer-edge__dark, .outer-edge__dark__no-right-edge {
@@ -45,18 +48,22 @@ body {
   border-right: solid 1px #c1c2c6;
   border-bottom: solid 1px #c1c2c6;
   border-radius: 1px;
+  height: 100%;
 }
 
 .inner-edge__light__no-padding {
   padding: 0px;
+  height: 100%;
 }
 
 .outer-edge__dark__no-right-edge {
   border-right: none;
+  height: 100%;
 }
 
 .outer-edge__light__no-right-edge {
   border-right: none;
+  height: 100%;
 }
 
 .outer-edge__console {
@@ -65,6 +72,7 @@ body {
   border-bottom: solid 1px #B1ABAB;
   border-left: solid 1px #6A6767;
   border-radius: 1px;
+  height: 100%;
 }
 
 .inner-edge__console {
@@ -73,6 +81,7 @@ body {
   border-bottom: solid 1px #A59B9A;
   border-left: solid 1px #EAE9E9;
   background-color: white;
+  height: 100%;
 }
 
 .control-panel__button-display {
@@ -112,6 +121,9 @@ body {
 
 .map-display__system-wrapper {
   background-color: #448149;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .map-display__center-section {
@@ -132,14 +144,15 @@ body {
 .map-display__system-status {
   background: #438149;
   color: #ededed;
-  margin: 0 auto;
+  margin: 0;
 }
 
 .map-display__system-status__container {
   display: flex;
   flex: 1;
   justify-content: space-between;
-  border: 10px solid #438149;
+  border-top: 10px solid #438149;
+  border-bottom: 10px solid #438149;
 }
 
 #sys-one {
@@ -147,7 +160,8 @@ body {
   text-orientation: mixed;
 }
 
-#sys-one, #sys-four {
+#sys-one,
+#sys-four {
   font-size: 38px;
 }
 
@@ -159,7 +173,8 @@ body {
   padding: 8px 8px 4px 8px;
 }
 
-#sys-three, #sys-two {
+#sys-three,
+#sys-two {
   font-size: 26px;
 }
 
@@ -173,6 +188,7 @@ body {
   grid-template-rows: auto auto;
   grid-template-columns: auto auto;
   justify-items: stretch;
+  height: 100%;
 }
 
 #outer-container__outer {
@@ -184,18 +200,12 @@ body {
   height: 100%;
 }
 
-#system-icons {
-  grid-area: 4/2/5/3;
-}
-
 #console-display {
   grid-area: 4/1/5/2;
 }
 
 #control-panel {
-  display: flex;
-  flex-direction: column;
-  grid-area: 1/2/2/3;
+  grid-area: 1/2/4/3;
 }
 
 #map-display__outer {
@@ -210,7 +220,13 @@ body {
   flex: 1;
 }
 
+#control-panel__inner {
+  display: flex;
+  flex-direction: column;
+}
+
 .room-info__container {
+  grid-area: 3/1/4/4;
   background-color: #e2eb57;
   padding: 3px;
   display: flex;
@@ -469,6 +485,7 @@ body {
 .button-control__bottom {
   display: flex;
   flex-direction: row;
+  height: 100%;
 }
 
 .button-control__top > div {
@@ -477,6 +494,10 @@ body {
 }
 
 .button-control__bottom > div {
+  flex: 1;
+}
+
+.control-panel__output-display {
   flex: 1;
 }
 

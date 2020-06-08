@@ -5,6 +5,7 @@
   border-bottom: solid 1px #c8c8c8;
   border-radius: 1px;
   background-color: #797979;
+  height: 100%;
 }
 
 .inner-edge__light {
@@ -13,6 +14,7 @@
   border-left: solid 2px #c8c8c8;
   border-top: solid 2px #c8c8c8;
   padding: 5px;
+  height: 100%;
 }
 
 .inner-edge__dark {
@@ -20,6 +22,7 @@
   border-right: solid 2px #3F3D43;
   border-left: solid 2px #A7A8AE;
   border-top: solid 2px #A7A8AE;
+  height: 100%;
 }
 
 .outer-edge__dark {
@@ -28,21 +31,25 @@
   border-right: solid 1px #c1c2c6;
   border-bottom: solid 1px #c1c2c6;
   border-radius: 1px;
+  height: 100%;
 }
 
 .inner-edge__light__no-padding {
   @extend .inner-edge__light;
   padding: 0px;
+  height: 100%;
 }
 
 .outer-edge__dark__no-right-edge {
   @extend .outer-edge__dark;
   border-right: none;
+  height: 100%;
 }
 
 .outer-edge__light__no-right-edge {
   @extend .outer-edge__light;
   border-right: none;
+  height: 100%;
 }
 
 .outer-edge__console {
@@ -51,6 +58,7 @@
   border-bottom: solid 1px #B1ABAB;
   border-left: solid 1px #6A6767;
   border-radius: 1px;
+  height: 100%;
 }
 
 .inner-edge__console {
@@ -59,4 +67,5 @@
   border-bottom: solid 1px #A59B9A;
   border-left: solid 1px #EAE9E9;
   background-color: white;
+  height: 100%;
 }
