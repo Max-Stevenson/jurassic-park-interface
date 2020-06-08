@@ -1,6 +1,4 @@
 .map-display__system-wrapper {
-  display: flex;
-  align-items: center;
   background-color: #448149;
 }
 
@@ -11,8 +9,6 @@
 }
 
 .map-display__container {
-  border-bottom: 10px solid #438149;
-  border-top: 10px solid #438149;
   display: flex;
   flex: 1;
   justify-content: space-between;
@@ -23,10 +19,16 @@
 }
 
 .map-display__system-status {
-  max-width: fit-content;
   background: #438149;
   color: #ededed;
   margin: 0 auto;
+}
+
+.map-display__system-status__container {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  border: 10px solid #438149;
 }
 
 #sys-one {
@@ -36,8 +38,6 @@
 
 #sys-one, #sys-four {
   font-size: 38px;
-  padding: 0 8px;
-  text-align: center;
 }
 
 #sys-two {
@@ -55,7 +55,6 @@
 #sys-four {
   writing-mode: tb-rl;
   transform: rotate(-180deg);
-  text-align: center;
 }
 
 

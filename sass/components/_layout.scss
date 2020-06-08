@@ -1,12 +1,18 @@
 #grid-container {
   display: grid;
   grid-template-rows: auto auto;
-  grid-template-columns: 485px 365px;
+  grid-template-columns: auto auto;
   justify-items: stretch;
+  height: 100%;
 }
 
-#outer-container {
-  width: fit-content;
+#outer-container__outer {
+  max-width: 85%;
+  height: 85%;
+}
+
+#outer-container__inner {
+  height: 100%;
 }
 
 #system-icons {
