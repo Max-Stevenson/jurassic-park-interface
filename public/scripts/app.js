@@ -22,3 +22,23 @@ document.getElementById("start-timer").addEventListener("click", () => {
   const display = document.getElementById("countdown-timer__display");
   startTimer(twoMinutes, display);
 });
+
+// user clicks start button
+
+// loop through DOM and add interactivity to all elements with interactive class
+
+// init steps to win as 0 (have to complete 10 to win)
+
+// take instruction from array and show on screen
+
+// start 2 minute timer
+
+// take instruction interaction object and listen for click 
+
+// after a timer or inccorect number of clicks display a hint for the object (flashing or hightlight border?)
+
+// once clicked check for if last instruction
+
+// if so, display win message, if not pull next instruction from array and show on screen
+
+// if time expires display lose message

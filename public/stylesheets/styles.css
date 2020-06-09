@@ -13,6 +13,7 @@ body {
 body {
   height: 100vh;
   width: 100vw;
+  font-family: "Roboto", sans-serif;
 }
 
 #grid-container {
@@ -211,6 +212,7 @@ body {
   justify-content: space-between;
   border-top: 10px solid #438149;
   border-bottom: 10px solid #438149;
+  font-style: italic;
 }
 
 #sys-one {
@@ -308,7 +310,7 @@ body {
   display: flex;
 }
 
-.screen-container__wrappper {
+.screen-container__wrapper {
   display: flex;
 }
 
