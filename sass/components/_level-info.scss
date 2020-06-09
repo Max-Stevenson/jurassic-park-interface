@@ -1,8 +1,9 @@
 .room-info__container {
-  grid-area: 3 / 1 / 4 / 4;
+  grid-area: 3 / 1 / 4 / 2;
   background-color: #e2eb57;
   padding: 3px;
   display: flex;
+  justify-content: space-evenly;
 }
 
 .room-info__level-display {
@@ -32,6 +33,7 @@
 
 .room-info__title-container {
   display: flex;
+  flex: 1;
   flex-direction: column;
   justify-content: space-between;
 }
