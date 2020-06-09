@@ -1,5 +1,5 @@
-function startTimer(duration, display) {
-  var timer = duration,
+const startTimer = (duration, display) => {
+  let timer = duration,
     minutes,
     seconds;
   setInterval(function() {
@@ -15,10 +15,10 @@ function startTimer(duration, display) {
       timer = duration;
     }
   }, 1000);
-}
+};
 
 document.getElementById("start-timer").addEventListener("click", () => {
-  var twoMinutes = 60 * 2,
-  display = document.getElementById("countdown-timer__display");
+  const twoMinutes = 60 * 2;
+  const display = document.getElementById("countdown-timer__display");
   startTimer(twoMinutes, display);
 });

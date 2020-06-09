@@ -6,9 +6,8 @@
   display: flex;
 }
 
-.screen-container__wrapper {
+.screen-container__wrappper {
   display: flex;
-  flex: 1;
 }
 
 .screen-container__outer {
@@ -98,6 +97,7 @@
 .console-display__wrapper {
   display: flex;
   align-items: center;
+  flex: 1;
 }
 
 .island-container__outer {
