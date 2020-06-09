@@ -15,6 +15,62 @@ body {
   width: 100vw;
 }
 
+#grid-container {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: auto auto;
+  justify-items: stretch;
+  height: 100%;
+}
+
+#outer-container__outer {
+  max-width: 90%;
+  height: 100%;
+}
+
+#outer-container__inner {
+  height: 100%;
+}
+
+#console-display {
+  grid-area: 4/1/5/2;
+}
+
+#control-panel {
+  grid-area: 1/2/4/3;
+}
+
+#map-display__outer {
+  grid-area: 1/1/4/2;
+  display: flex;
+  flex-direction: column;
+}
+
+#map-display__inner {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+#control-panel__inner {
+  display: flex;
+  flex-direction: column;
+}
+
+#top-level {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+#instructions-panel__outer {
+  flex: 1;
+}
+
+#instructions-panel__inner {
+  flex: 1;
+}
+
 .outer-edge__light, .outer-edge__light__no-right-edge {
   border-left: solid 1px #585356;
   border-top: solid 1px #585356;
@@ -181,48 +237,6 @@ body {
 #sys-four {
   writing-mode: tb-rl;
   transform: rotate(-180deg);
-}
-
-#grid-container {
-  display: grid;
-  grid-template-rows: auto auto;
-  grid-template-columns: auto auto;
-  justify-items: stretch;
-  height: 100%;
-}
-
-#outer-container__outer {
-  max-width: 90%;
-  height: 100%;
-}
-
-#outer-container__inner {
-  height: 100%;
-}
-
-#console-display {
-  grid-area: 4/1/5/2;
-}
-
-#control-panel {
-  grid-area: 1/2/4/3;
-}
-
-#map-display__outer {
-  grid-area: 1/1/4/2;
-  display: flex;
-  flex-direction: column;
-}
-
-#map-display__inner {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-
-#control-panel__inner {
-  display: flex;
-  flex-direction: column;
 }
 
 .room-info__container {

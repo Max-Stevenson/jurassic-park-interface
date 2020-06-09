@@ -39,3 +39,9 @@
   display: flex;
   flex-direction: column;
 }
+
+#top-level {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
