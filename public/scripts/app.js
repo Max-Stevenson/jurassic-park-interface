@@ -31,8 +31,8 @@ trashIcon.addEventListener("click", () => {
   const trashModal = document.getElementById("trash-modal");
   const trashModalCloseButton = document.getElementById("modal-container__close-button");
   trashModalCloseButton.addEventListener("click", () => {
-    trashModal.classList.add("modal-inactive");
     trashModal.classList.remove("modal-active");
+    trashModal.classList.add("modal-inactive");
   });
   trashModal.addEventListener("focusout", () => {
     trashModal.classList.add("hidden");
