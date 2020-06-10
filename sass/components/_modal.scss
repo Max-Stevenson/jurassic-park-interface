@@ -1,10 +1,9 @@
 .modal-container {
   position: fixed;
-  transform-origin: bottom right;
-  transform: translate(-400px, -250px) scale(1, 1);
+  
   // top: 30%;
   // left: 20%;
-  z-index: 9999;
+  z-index: 0;
   background-color: #797979;
   width: 500px;
   height: 200px;
@@ -12,6 +11,28 @@
   transition-property: transform;
 }
 
-.modal__active {
-  
+#trash-icon-wrapper {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+}
+
+.modal-inactive {
+  position: absolute;
+  z-index: 0;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.modal-active {
+  transform-origin: bottom right;
+  transform: translate(-400px, -250px) scale(1, 1);
+  z-index: 99;
+  background-color: #797979;
+  width: 500px;
+  height: 200px;
+  transition-duration: 2s;
+  transition-property: transform;
 }

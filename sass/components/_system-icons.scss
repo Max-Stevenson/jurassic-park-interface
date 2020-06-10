@@ -22,11 +22,15 @@
   padding: 2px;
 }
 
+#trash-icon {
+  z-index: 1;
+}
+
 .system-icons__icon-wrapper {
   display: flex;
   align-items: flex-end;
 }
 
-#system-icons__wrapper > div > img {
+#system-icons__wrapper img {
   cursor: pointer;
 }

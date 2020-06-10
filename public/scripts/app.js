@@ -31,12 +31,14 @@ trashIcon.addEventListener("click", () => {
   const trashModal = document.getElementById("trash-modal");
   const trashModalCloseButton = document.getElementById("modal-container__close-button");
   trashModalCloseButton.addEventListener("click", () => {
-    trashModal.classList.add("hidden");
+    trashModal.classList.add("modal-inactive");
+    trashModal.classList.remove("modal-active");
   });
   trashModal.addEventListener("focusout", () => {
     trashModal.classList.add("hidden");
   });
-  trashModal.classList.remove("hidden");
+  trashModal.classList.remove("modal-inactive");
+  trashModal.classList.add("modal-active");
   trashModal.focus();
 });
 /////////////////
