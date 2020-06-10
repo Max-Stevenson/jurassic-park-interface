@@ -16,6 +16,12 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.hidden {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
 #grid-container {
   display: grid;
   grid-template-rows: auto auto;
@@ -581,6 +587,16 @@ body {
 .system-icons__icon-wrapper {
   display: flex;
   align-items: flex-end;
+}
+
+.modal-container {
+  position: fixed;
+  top: 30%;
+  left: 20%;
+  z-index: 9999;
+  background-color: #797979;
+  width: 500px;
+  height: 200px;
 }
 
 /*# sourceMappingURL=styles.css.map */

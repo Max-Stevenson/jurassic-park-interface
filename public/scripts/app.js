@@ -23,6 +23,24 @@ document.getElementById("start-timer").addEventListener("click", () => {
   startTimer(twoMinutes, display);
 });
 
+
+// Trash modal code
+const trashIcon = document.getElementById("trash-icon");
+
+trashIcon.addEventListener("click", () => {
+  const trashModal = document.getElementById("trash-modal");
+  const trashModalCloseButton = document.getElementById("modal-container__close-button");
+  trashModalCloseButton.addEventListener("click", () => {
+    trashModal.classList.add("hidden");
+  });
+  trashModal.addEventListener("focusout", () => {
+    trashModal.classList.add("hidden");
+  });
+  trashModal.classList.remove("hidden");
+  trashModal.focus();
+});
+/////////////////
+
 // user clicks start button
 
 // loop through DOM and add interactivity to all elements with interactive class
