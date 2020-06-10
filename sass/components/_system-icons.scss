@@ -26,3 +26,7 @@
   display: flex;
   align-items: flex-end;
 }
+
+#system-icons__wrapper > div > img {
+  cursor: pointer;
+}

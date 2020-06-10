@@ -589,14 +589,20 @@ body {
   align-items: flex-end;
 }
 
+#system-icons__wrapper > div > img {
+  cursor: pointer;
+}
+
 .modal-container {
   position: fixed;
-  top: 30%;
-  left: 20%;
+  transform-origin: bottom right;
+  transform: translate(-400px, -250px) scale(1, 1);
   z-index: 9999;
   background-color: #797979;
   width: 500px;
   height: 200px;
+  transition-duration: 2s;
+  transition-property: transform;
 }
 
 /*# sourceMappingURL=styles.css.map */
