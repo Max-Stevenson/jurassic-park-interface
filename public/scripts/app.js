@@ -51,10 +51,10 @@ for (let i = 0; i < topControlPanelButtons.length; i++) {
     button.classList.add("button__depressed");
     button.classList.remove("outer-edge__light");
     button.firstElementChild.classList.remove("inner-edge__light");
-    prevButton.firstElementChild
+    button.firstElementChild
       .querySelector("p")
       .classList.add("button-text__embossed");
-    prevButton.firstElementChild
+    button.firstElementChild
       .querySelector("p")
       .classList.remove("button-text__engraved");
     // find depressed styling in children
