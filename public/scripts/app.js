@@ -38,11 +38,25 @@ for (let i = 0; i < topControlPanelButtons.length; i++) {
       let prevButton = topControlPanelButtons[k];
       if (prevButton.classList.contains("button__depressed")) {
         prevButton.classList.remove("button__depressed");
-        prevButton.classList.add("inner-edge__light");
-        prevButton.firstElementChild.classList.remove("button-text__embossed");
-        prevButton.firstElementChild.classList.add("button-text__engraved");
+        prevButton.classList.add("outer-edge__light");
+        prevButton.firstElementChild.classList.add("inner-edge__light");
+        prevButton.firstElementChild
+          .querySelector("p")
+          .classList.remove("button-text__embossed");
+        prevButton.firstElementChild
+          .querySelector("p")
+          .classList.add("button-text__engraved");
       }
     }
+    button.classList.add("button__depressed");
+    button.classList.remove("outer-edge__light");
+    button.firstElementChild.classList.remove("inner-edge__light");
+    prevButton.firstElementChild
+      .querySelector("p")
+      .classList.add("button-text__embossed");
+    prevButton.firstElementChild
+      .querySelector("p")
+      .classList.remove("button-text__engraved");
     // find depressed styling in children
     // remove depressed styling and embossed styling from previous button
     // add inner edge light and engraved styling
@@ -52,8 +66,7 @@ for (let i = 0; i < topControlPanelButtons.length; i++) {
     // add embossed styling to para
     //
   });
-}
-
+};
 ////////////////////////
 
 // Trash modal
