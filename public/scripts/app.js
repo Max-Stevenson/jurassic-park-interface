@@ -1,3 +1,4 @@
+// Timer
 const startTimer = (duration, display) => {
   let timer = duration,
     minutes,
@@ -22,14 +23,47 @@ document.getElementById("start-timer").addEventListener("click", () => {
   const display = document.getElementById("countdown-timer__display");
   startTimer(twoMinutes, display);
 });
+////////////////////////
 
+// Control panel buttons
+// .control-panel__button-display
 
-// Trash modal code
+const topControlPanelButtons = document.getElementsByClassName(
+  "control-panel__button-display"
+)[0].children;
+for (let i = 0; i < topControlPanelButtons.length; i++) {
+  let button = topControlPanelButtons[i];
+  button.addEventListener("click", () => {
+    for (let k = 0; k < topControlPanelButtons.length; k++) {
+      let prevButton = topControlPanelButtons[k];
+      if (prevButton.classList.contains("button__depressed")) {
+        prevButton.classList.remove("button__depressed");
+        prevButton.classList.add("inner-edge__light");
+        prevButton.firstElementChild.classList.remove("button-text__embossed");
+        prevButton.firstElementChild.classList.add("button-text__engraved");
+      }
+    }
+    // find depressed styling in children
+    // remove depressed styling and embossed styling from previous button
+    // add inner edge light and engraved styling
+    // remove engrave styling from para
+    // remove inner edge light styling from div
+    // add depressed styling to div
+    // add embossed styling to para
+    //
+  });
+}
+
+////////////////////////
+
+// Trash modal
 const trashIcon = document.getElementById("trash-icon");
 
 trashIcon.addEventListener("click", () => {
   const trashModal = document.getElementById("trash-modal");
-  const trashModalCloseButton = document.getElementById("modal-container__close-button");
+  const trashModalCloseButton = document.getElementById(
+    "modal-container__close-button"
+  );
   trashModalCloseButton.addEventListener("click", () => {
     trashModal.classList.remove("modal-active");
     trashModal.classList.add("modal-inactive");
@@ -37,7 +71,7 @@ trashIcon.addEventListener("click", () => {
   trashModal.classList.remove("modal-inactive");
   trashModal.classList.add("modal-active");
 });
-/////////////////
+////////////////////////
 
 // user clicks start button
 
@@ -49,7 +83,7 @@ trashIcon.addEventListener("click", () => {
 
 // start 2 minute timer
 
-// take instruction interaction object and listen for click 
+// take instruction interaction object and listen for click
 
 // after a timer or inccorect number of clicks display a hint for the object (flashing or hightlight border?)
 
