@@ -29,20 +29,19 @@
 }
 .video-screen__loading-spinner::before {
   left: 0;
-  // background: linear-gradient(#000e0d, #000e0d 50%, #f9fb07 50%);
   animation-name: loadingSpinner;
   animation-direction: normal;
   animation-duration: 2s;
   animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 .video-screen__loading-spinner::after {
   left: 50%;
-  // background: linear-gradient(#f9fb07, #f9fb07 50%, #000e0d 50%);
   animation-name: loadingSpinner;
   animation-direction: reverse;
   animation-duration: 2s;
   animation-iteration-count: infinite;
-  animation-delay: 2s;
+  animation-timing-function: linear;
 }
 
 .video-screen_loading-spinner__wrapper {
