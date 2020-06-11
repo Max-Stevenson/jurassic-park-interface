@@ -584,6 +584,10 @@ body {
   padding: 2px;
 }
 
+#trash-icon-wrapper {
+  display: flex;
+}
+
 #trash-icon {
   z-index: 1;
 }
@@ -606,6 +610,14 @@ body {
   width: 0;
   height: 0;
   background-color: #797979;
+}
+
+.modal-inactive {
+  width: 0px;
+  height: 0px;
+  transform-origin: bottom right;
+  transform: translate(600px, 500px);
+  transition: all 1s linear 0s;
 }
 
 .modal-active {

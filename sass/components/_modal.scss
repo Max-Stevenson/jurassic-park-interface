@@ -10,7 +10,11 @@
 }
 
 .modal-inactive {
-
+  width: 0px;
+  height: 0px;
+  transform-origin: bottom right;
+  transform: translate(600px, 500px);
+  transition: all 1s linear 0s;
 }
 
 .modal-active {

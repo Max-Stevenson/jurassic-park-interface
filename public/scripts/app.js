@@ -34,12 +34,8 @@ trashIcon.addEventListener("click", () => {
     trashModal.classList.remove("modal-active");
     trashModal.classList.add("modal-inactive");
   });
-  trashModal.addEventListener("focusout", () => {
-    trashModal.classList.add("hidden");
-  });
   trashModal.classList.remove("modal-inactive");
   trashModal.classList.add("modal-active");
-  trashModal.focus();
 });
 /////////////////
 
