@@ -26,14 +26,12 @@ document.getElementById("start-timer").addEventListener("click", () => {
 ////////////////////////
 
 // Control panel buttons
-// .control-panel__button-display
-
 const topControlPanelButtons = document.getElementsByClassName(
   "control-panel__button-display"
 )[0].children;
 for (let i = 0; i < topControlPanelButtons.length; i++) {
   let button = topControlPanelButtons[i];
-  button.addEventListener("click", () => {
+  button.addEventListener("click", event => {
     for (let k = 0; k < topControlPanelButtons.length; k++) {
       let prevButton = topControlPanelButtons[k];
       if (prevButton.classList.contains("button__depressed")) {
@@ -57,15 +55,25 @@ for (let i = 0; i < topControlPanelButtons.length; i++) {
     button.firstElementChild
       .querySelector("p")
       .classList.remove("button-text__engraved");
-    // find depressed styling in children
-    // remove depressed styling and embossed styling from previous button
-    // add inner edge light and engraved styling
-    // remove engrave styling from para
-    // remove inner edge light styling from div
-    // add depressed styling to div
-    // add embossed styling to para
-    //
+    changeVideoScreenTab(event);
   });
+}
+////////////////////////
+
+// Video screen tab change
+const changeVideoScreenTab = event => {
+  let selectedTab = event.currentTarget.lastElementChild.firstElementChild.innerHTML.toLowerCase();
+  const tabContentElements = document.getElementsByClassName(
+    "video-screen__tab-content"
+  );
+
+  for (let i = 0; i < tabContentElements.length; i++) {
+    if (tabContentElements[i].id === `video-screen__${selectedTab}`) {
+      tabContentElements[i].style.display = "block";
+    } else {
+      tabContentElements[i].style.display = "none";
+    }
+  }
 };
 ////////////////////////
 

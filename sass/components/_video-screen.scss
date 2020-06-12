@@ -70,6 +70,16 @@
   text-transform: uppercase;
 }
 
+.video-screen__hidden {
+  display: none
+}
+
+#video-screen__reboot {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
 .video-screen__info-text {
   font-style: italic;
   text-transform: uppercase;
