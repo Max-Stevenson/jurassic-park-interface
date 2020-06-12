@@ -1,5 +1,6 @@
 .control-panel__video-screen {
   margin-bottom: 10px;
+  min-height: 267px;
 }
 
 .video-screen {
@@ -8,6 +9,7 @@
   flex-direction: column;
   align-items: center;
   padding: 50px 20px;
+  height: 100%;
 }
 
 .video-screen__loading-spinner {
