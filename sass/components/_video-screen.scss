@@ -8,7 +8,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 50px 20px;
   height: 100%;
 }
 
@@ -95,5 +94,11 @@
   to {
     background: linear-gradient(#f9fb07, #f9fb07 50%, #000e0d 50%);
   }
+}
+
+.power-screen__button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 

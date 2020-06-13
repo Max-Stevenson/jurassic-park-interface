@@ -69,7 +69,7 @@ const changeVideoScreenTab = event => {
 
   for (let i = 0; i < tabContentElements.length; i++) {
     if (tabContentElements[i].id === `video-screen__${selectedTab}`) {
-      tabContentElements[i].style.display = "block";
+      tabContentElements[i].style.display = "flex";
     } else {
       tabContentElements[i].style.display = "none";
     }
