@@ -6,7 +6,7 @@
       type="text/css"
       href="./public/stylesheets/styles.css"
     />
-    <link rel="icon" href="./public/icons/JPicon.png">
+    <link rel="icon" href="./public/icons/JPicon.png" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400;1,500;1,700&display=swap"
       rel="stylesheet"
@@ -151,20 +151,28 @@
                           class="video-screen__tab-content video-screen__hidden"
                           id="video-screen__power"
                         >
-                        <h2>power</h2>
-                      </div>
-                      <div
+                          <h2>power</h2>
+                          <div class="power-screen__button-container">
+                            <button id="power-charge"></button>
+                            <p class="power-button__text">Push to Charge</p>
+                          </div>
+                          <div class="power-screen__button-container">
+                              <button id="power-close"></button>
+                              <p class="power-button__text">Push to Close</p>
+                            </div>
+                        </div>
+                        <div
                           class="video-screen__tab-content video-screen__hidden"
                           id="video-screen__tour"
                         >
-                        <h2>Tour</h2>
-                      </div>
-                      <div
+                          <h2>Tour</h2>
+                        </div>
+                        <div
                           class="video-screen__tab-content video-screen__hidden"
                           id="video-screen__time"
                         >
-                        <h2>Time</h2>
-                      </div>
+                          <h2>Time</h2>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -381,7 +389,7 @@
               <div class="instructions-header__container">
                 <h1>Welcome to Jurassic Park</h1>
               </div>
-              <img src="./public/images/JPlogo.jpeg">
+              <img src="./public/images/JPlogo.jpeg" />
             </div>
           </div>
           <div class="outer-edge__dark">
