@@ -23,13 +23,13 @@
   grid-area: 1 / 2 / 4 / 3;
 }
 
-#map-display__outer {
+#tour-display__outer {
   grid-area: 1 / 1 / 4 / 2;
   display: flex;
   flex-direction: column;
 }
 
-#map-display__inner {
+#tour-display__inner {
   display: flex;
   flex-direction: column;
   flex: 1;

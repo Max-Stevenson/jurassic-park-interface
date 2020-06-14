@@ -19,33 +19,52 @@
           <div id="grid-container">
             <div
               class="outer-edge__dark__no-right-edge"
-              id="map-display__outer"
+              id="tour-display__outer"
             >
               <div
-                class="inner-edge__light__no-padding"
-                id="map-display__inner"
+                class="inner-edge__light__no-padding  main-display main-display__hidden"
+                id="power-display__inner"
               >
-                <div class="map-display__container">
-                  <div class="map-display__system-status__container">
-                    <div class="map-display__system-wrapper">
-                      <h1 id="sys-one" class="map-display__system-status">
+                <div class="toggle-switch-container">
+                  <div class="toggle-switch switch-vertical">
+                    <input
+                      id="toggle-a"
+                      type="radio"
+                      name="switch"
+                      checked="checked"
+                    />
+                    <input id="toggle-b" type="radio" name="switch" />
+                    <span class="toggle-outside">
+                      <span class="toggle-inside"></span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="inner-edge__light__no-padding main-display"
+                id="tour-display__inner"
+              >
+                <div class="tour-display__container">
+                  <div class="tour-display__system-status__container">
+                    <div class="tour-display__system-wrapper">
+                      <h1 id="sys-one" class="tour-display__system-status">
                         SYSTEM SECURED
                       </h1>
                     </div>
-                    <div class="map-display__center-section">
-                      <div class="map-display__system-wrapper">
-                        <h1 id="sys-two" class="map-display__system-status">
+                    <div class="tour-display__center-section">
+                      <div class="tour-display__system-wrapper">
+                        <h1 id="sys-two" class="tour-display__system-status">
                           SYSTEM SECURED
                         </h1>
                       </div>
-                      <div class="map-display__system-wrapper">
-                        <h1 id="sys-three" class="map-display__system-status">
+                      <div class="tour-display__system-wrapper">
+                        <h1 id="sys-three" class="tour-display__system-status">
                           SYSTEM SECURED
                         </h1>
                       </div>
                     </div>
-                    <div class="map-display__system-wrapper">
-                      <h1 id="sys-four" class="map-display__system-status">
+                    <div class="tour-display__system-wrapper">
+                      <h1 id="sys-four" class="tour-display__system-status">
                         SYSTEM SECURED
                       </h1>
                     </div>
@@ -158,23 +177,6 @@
                           <div class="power-screen__button-container">
                             <button id="power-close"></button>
                             <p class="power-button__text">Push to Close</p>
-                          </div>
-                          <div class="onoffswitch">
-                            <input
-                              type="checkbox"
-                              name="onoffswitch"
-                              class="onoffswitch-checkbox"
-                              id="myonoffswitch"
-                              tabindex="0"
-                              checked
-                            />
-                            <label
-                              class="onoffswitch-label"
-                              for="myonoffswitch"
-                            >
-                              <span class="onoffswitch-inner"></span>
-                              <span class="onoffswitch-switch"></span>
-                            </label>
                           </div>
                         </div>
                         <div

@@ -1,17 +1,17 @@
-.map-display__system-wrapper {
+.tour-display__system-wrapper {
   background-color: #448149;
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
 
-.map-display__center-section {
+.tour-display__center-section {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.map-display__container {
+.tour-display__container {
   display: flex;
   flex: 1;
   justify-content: space-between;
@@ -21,13 +21,13 @@
     linear-gradient(to bottom, white 1px, transparent 1px);
 }
 
-.map-display__system-status {
+.tour-display__system-status {
   background: #438149;
   color: #ededed;
   margin: 0;
 }
 
-.map-display__system-status__container {
+.tour-display__system-status__container {
   display: flex;
   flex: 1;
   justify-content: space-between;

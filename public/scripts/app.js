@@ -55,14 +55,15 @@ for (let i = 0; i < topControlPanelButtons.length; i++) {
     button.firstElementChild
       .querySelector("p")
       .classList.remove("button-text__engraved");
-    changeVideoScreenTab(event);
+    changeScreenContent(event);
   });
 }
 ////////////////////////
 
 // Video screen tab change
-const changeVideoScreenTab = event => {
+const changeScreenContent = event => {
   let selectedTab = event.currentTarget.lastElementChild.firstElementChild.innerHTML.toLowerCase();
+  const mainDisplayElements = document.getElementsByClassName("main-display");
   const tabContentElements = document.getElementsByClassName(
     "video-screen__tab-content"
   );
@@ -72,6 +73,14 @@ const changeVideoScreenTab = event => {
       tabContentElements[i].style.display = "flex";
     } else {
       tabContentElements[i].style.display = "none";
+    }
+  }
+
+  for (let i = 0; i < mainDisplayElements.length; i++) {
+    if (mainDisplayElements[i].id === `${selectedTab}-display__inner`) {
+      mainDisplayElements[i].style.display = "flex";
+    } else {
+      mainDisplayElements[i].style.display = "none";
     }
   }
 };

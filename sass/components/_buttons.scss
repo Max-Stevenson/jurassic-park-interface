@@ -13,7 +13,7 @@
 
 .button-text__engraved__light {
   @extend .button-text__engraved;
-  text-shadow: 3px 2px 1px #B0B4A9, 1px 1px 0.5px #666C57;
+  text-shadow: 3px 2px 1px #b0b4a9, 1px 1px 0.5px #666c57;
 }
 
 .button-text__embossed {
@@ -26,7 +26,7 @@
 
 .button__depressed {
   width: fit-content;
-  box-shadow: inset 0 0 8px #4C4C4C;
+  box-shadow: inset 0 0 8px #4c4c4c;
   padding: 5px;
   cursor: default;
 }
@@ -41,14 +41,14 @@
 
 #power-charge {
   border-radius: 50%;
-  background-color: #F6E100;
+  background-color: #f6e100;
   width: 50px;
   height: 50px;
 }
 
 #power-close {
   border-radius: 50%;
-  background-color: #148E42;
+  background-color: #148e42;
   width: 50px;
   height: 50px;
 }
@@ -57,51 +57,120 @@
   color: white;
 }
 
-.onoffswitch {
-  position: relative; width: 90px;
-  -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
-}
-.onoffswitch-checkbox {
-  position: absolute;
-  opacity: 0;
-  pointer-events: none;
-}
-.onoffswitch-label {
-  display: block; overflow: hidden; cursor: pointer;
-  border: 2px solid #999999; border-radius: 20px;
-}
-.onoffswitch-inner {
-  display: block; width: 200%; margin-left: -100%;
-  transition: margin 0.3s ease-in 0s;
-}
-.onoffswitch-inner:before, .onoffswitch-inner:after {
-  display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
-  font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
-.onoffswitch-inner:before {
-  content: "HIGH";
-  padding-left: 10px;
-  background-color: #34A7C1; color: #FFFFFF;
-}
-.onoffswitch-inner:after {
-  content: "LOW";
-  padding-right: 10px;
-  background-color: #EEEEEE; color: #999999;
-  text-align: right;
-}
-.onoffswitch-switch {
-  display: block; width: 18px; margin: 6px;
-  background: #FFFFFF;
-  position: absolute; top: 0; bottom: 0;
-  right: 56px;
-  border: 2px solid #999999; border-radius: 20px;
-  transition: all 0.3s ease-in 0s; 
-}
-.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
-  margin-left: 0;
-}
-.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
-  right: 0px; 
+
+body {
+  background-color: #212121;
+  font-family: "Roboto", sans-serif;
 }
 
+.toggle-switch-container {
+  align-content: center;
+  padding: 30px;
+}
+
+.toggle-switch {
+  margin: 0;
+}
+
+.toggle-switch {
+  width: 10px;
+  position: relative;
+}
+
+.toggle-switch input {
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.toggle-switch input:checked {
+  z-index: 1;
+}
+
+.toggle-switch input:checked + label {
+  opacity: 1;
+  cursor: default;
+}
+
+.toggle-switch input:not(:checked) + label:hover {
+  opacity: 0.5;
+}
+
+.toggle-switch label {
+  color: #fff;
+  opacity: 0.33;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.toggle-switch .toggle-outside {
+  height: 100%;
+  border-radius: 17px;
+  padding: 11px;
+  overflow: hidden;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.toggle-switch .toggle-inside {
+  border-radius: 50%;
+  background: #424242;
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+}
+
+.switch-vertical {
+  background-color: #00f;
+  width: 0px;
+  height: 60px;
+  margin-left: 27px;
+}
+
+.switch-vertical input {
+  height: 100%;
+  width: 60px;
+  right: 0;
+  margin: 0;
+}
+
+.switch-vertical label {
+  font-size: 15px;
+  line-height: 30px;
+  display: block;
+  width: 80px;
+  height: 50%;
+  margin: 0;
+  text-align: left;
+  padding-left: 12px;
+}
+
+.switch-vertical .toggle-outside {
+  background: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  width: 23px;
+  height: 100%;
+  right: 0;
+  top: 0;
+}
+
+.switch-vertical .toggle-inside {
+  height: 17px;
+  left: 3px;
+  top: 3px;
+  width: 17px;
+}
+
+.switch-vertical input:checked ~ .toggle-outside .toggle-inside {
+  top: 3px;
+}
+
+.switch-vertical input ~ input:checked ~ .toggle-outside .toggle-inside {
+  top: 40px;
+}
