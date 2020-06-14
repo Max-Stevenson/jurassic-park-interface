@@ -208,6 +208,13 @@ body {
   height: 50px;
 }
 
+#power-open {
+  border-radius: 50%;
+  background-color: #BB0005;
+  width: 50px;
+  height: 50px;
+}
+
 .power-button__text {
   color: white;
 }
