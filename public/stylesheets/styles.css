@@ -11,8 +11,12 @@ body {
   padding: 0;
 }
 
+@media (max-height: 900px) {
+  body {
+    height: 100vh;
+  }
+}
 body {
-  height: 100vh;
   width: 100vw;
   font-family: "Roboto", sans-serif;
 }
@@ -650,7 +654,7 @@ body {
   display: none;
 }
 
-#video-screen__reboot {
+#video-screen__vehicle {
   display: flex;
   align-items: center;
   flex-direction: column;
