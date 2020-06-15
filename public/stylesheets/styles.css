@@ -590,7 +590,6 @@ body {
 .video-screen {
   background-color: #606971;
   display: flex;
-  flex-direction: column;
   align-items: center;
   height: 100%;
 }
@@ -685,30 +684,63 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 5px;
+  border-bottom: white solid 2px;
+}
+
+.power-screen__button-container button {
+  outline-style: none;
+}
+
+#push-to-open-button {
+  border-bottom: 0px;
 }
 
 .power-screen__left {
   display: flex;
+  flex: 1;
+  border-right: white solid 1px;
   flex-direction: column;
+}
+
+.power-screen__right {
+  flex: 1;
+  border-left: white solid 1px;
 }
 
 .power-button__text {
   margin: 8px 0px;
 }
 
+.power-screen__contact-position-container, .power-screen__stored-energy-container {
+  text-align: center;
+  border-bottom: white solid 2px;
+}
+
 .power-screen__warning-text {
   color: white;
   margin: 0;
   font-size: x-small;
+  padding-left: 10px;
+  padding-top: 10px;
 }
 
 .power-screen__status-text {
-  margin: 5px 0;
+  margin: 5px auto;
 }
 
 #video-screen__power {
   flex: 1;
-  justify-content: space-evenly;
+  justify-content: center;
+}
+
+#charge-status {
+  background-color: #f6e100;
+}
+
+#contact-status {
+  background-color: #148e42;
+  color: white;
 }
 
 .control-panel__button-control {
