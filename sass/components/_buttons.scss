@@ -120,14 +120,13 @@ body {
 
 .toggle-switch .toggle-outside {
   height: 100%;
-  border-radius: 17px;
+  border-radius: 5px;
   padding: 11px;
   overflow: hidden;
   transition: opacity 0.3s ease-in-out;
 }
 
 .toggle-switch .toggle-inside {
-  border-radius: 50%;
   background: #424242;
   position: absolute;
   transition: all 0.3s ease-in-out;
@@ -168,7 +167,7 @@ body {
 }
 
 .switch-vertical .toggle-inside {
-  height: 17px;
+  height: 8px;
   left: 3px;
   top: 3px;
   width: 17px;

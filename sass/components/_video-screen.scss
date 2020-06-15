@@ -1,12 +1,12 @@
 .control-panel__video-screen {
   margin-bottom: 10px;
   min-height: 267px;
+  max-height: 267px;
 }
 
 .video-screen {
   background-color: #606971;
   display: flex;
-  flex-direction: column;
   align-items: center;
   height: 100%;
 }
@@ -22,7 +22,7 @@
 
 .video-screen__loading-spinner::before,
 .video-screen__loading-spinner::after {
-  content: '';
+  content: "";
   position: absolute;
   height: 100%;
   width: 50%;
@@ -72,7 +72,7 @@
 }
 
 .video-screen__hidden {
-  display: none
+  display: none;
 }
 
 #video-screen__vehicle {
@@ -102,3 +102,29 @@
   align-items: center;
 }
 
+.power-screen__left {
+  display: flex;
+  flex-direction: column;
+}
+
+.power-button__text {
+  margin: 8px 0px;
+}
+
+.power-screen__warning-container {
+}
+
+.power-screen__warning-text {
+  color: white;
+  margin: 0;
+  font-size: x-small;
+}
+
+.power-screen__status-text {
+  margin: 5px 0;
+}
+
+#video-screen__power {
+  flex: 1;
+  justify-content: space-evenly;
+}
