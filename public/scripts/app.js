@@ -29,19 +29,37 @@ document.getElementById("start-timer").addEventListener("click", () => {
 const voltageDisplay = document.getElementById("current-voltage");
 const voltageToggleInputs = document.querySelectorAll('input[type="radio"]');
 
+const updateVoltage = () => {
+  let totalVoltage = 0;
+  for (let i = 0; i < voltageToggleInputs.length; i++) {
+    if (voltageToggleInputs[i].checked) {
+      totalVoltage += parseInt(voltageToggleInputs[i].value);
+    }
+  }
+  voltageDisplay.innerHTML = totalVoltage;
+};
+
 for (let i = 0; i < voltageToggleInputs.length; i++) {
   voltageToggleInputs[i].addEventListener("click", event => {
-    let totalVoltage = 0;
-    for (let i = 0; i < voltageToggleInputs.length; i++) {
-      if (voltageToggleInputs[i].checked) {
-        totalVoltage += parseInt(voltageToggleInputs[i].value);
-      }
-    }
-    voltageDisplay.innerHTML = totalVoltage + "V";
+    updateVoltage();
   });
 }
 
+updateVoltage();
+
 ////////////////////////
+
+// Breaker code
+chargeButton = document.getElementById("power-charge");
+chargeStatus = document.getElementById("charge-status");
+chargeButton.addEventListener("click", () => {
+  let currentVoltage = parseInt(voltageDisplay.innerHTML);
+  if (currentVoltage === 220) {
+    chargeStatus.innerHTML = "Charged"
+  }
+});
+////////////////////////
+
 
 // Control panel buttons
 const topControlPanelButtons = document.getElementsByClassName(
