@@ -49,17 +49,28 @@ updateVoltage();
 
 ////////////////////////
 
-// Breaker code
-chargeButton = document.getElementById("power-charge");
-chargeStatus = document.getElementById("charge-status");
+// Charge code
+const chargeButton = document.getElementById("power-charge");
+const chargeStatus = document.getElementById("charge-status");
 chargeButton.addEventListener("click", () => {
   let currentVoltage = parseInt(voltageDisplay.innerHTML);
   if (currentVoltage === 220) {
-    chargeStatus.innerHTML = "Charged"
+    chargeStatus.innerHTML = "Charged";
+  } else {
+    chargeStatus.innerHTML = "Discharged";
   }
 });
 ////////////////////////
 
+// Contact code
+const closeButton = document.getElementById("power-close");
+const breakerStatus = document.getElementById("contact-status");
+closeButton.addEventListener("click", () => {
+  if (chargeStatus.innerHTML === "Charged") {
+    breakerStatus.innerHTML = "Closed";
+  }
+});
+////////////////////////
 
 // Control panel buttons
 const topControlPanelButtons = document.getElementsByClassName(
