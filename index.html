@@ -25,69 +25,99 @@
                 class="inner-edge__light__no-padding  main-display main-display__hidden"
                 id="power-display__inner"
               >
-                <div class="toggle-switch-container">
-                  <p>High</p>
-                  <div class="toggle-switch switch-vertical">
-                    <input
-                      id="toggle-a"
-                      type="radio"
-                      name="switch-one"
-                      checked="checked"
-                    />
-                    <input id="toggle-b" type="radio" name="switch-one" />
-                    <span class="toggle-outside">
-                      <span class="toggle-inside"></span>
-                    </span>
+                <div class="power-screen__voltage-switches-container">
+                  <div class="toggle-switch-container">
+                    <p>High</p>
+                    <div class="toggle-switch switch-vertical">
+                      <input
+                        id="toggle-high"
+                        type="radio"
+                        name="switch-one"
+                        checked="checked"
+                        value="60"
+                      />
+                      <input
+                        id="toggle-low"
+                        type="radio"
+                        name="switch-one"
+                        value="30"
+                      />
+                      <span class="toggle-outside">
+                        <span class="toggle-inside"></span>
+                      </span>
+                    </div>
+                    <p>Low</p>
                   </div>
-                  <p>Low</p>
+                  <div class="toggle-switch-container">
+                    <p>High</p>
+                    <div class="toggle-switch switch-vertical">
+                      <input
+                        id="toggle-high"
+                        type="radio"
+                        name="switch-two"
+                        checked="checked"
+                        value="80"
+                      />
+                      <input
+                        id="toggle-low"
+                        type="radio"
+                        name="switch-two"
+                        value="20"
+                      />
+                      <span class="toggle-outside">
+                        <span class="toggle-inside"></span>
+                      </span>
+                    </div>
+                    <p>Low</p>
+                  </div>
+                  <div class="toggle-switch-container">
+                    <p>High</p>
+                    <div class="toggle-switch switch-vertical">
+                      <input
+                        id="toggle-high"
+                        type="radio"
+                        name="switch-three"
+                        checked="checked"
+                        value="50"
+                      />
+                      <input
+                        id="toggle-low"
+                        type="radio"
+                        name="switch-three"
+                        value="40"
+                      />
+                      <span class="toggle-outside">
+                        <span class="toggle-inside"></span>
+                      </span>
+                    </div>
+                    <p>Low</p>
+                  </div>
+                  <div class="toggle-switch-container">
+                    <p>High</p>
+                    <div class="toggle-switch switch-vertical">
+                      <input
+                        id="toggle-high"
+                        type="radio"
+                        name="switch-four"
+                        checked="checked"
+                        value="100"
+                      />
+                      <input
+                        id="toggle-low"
+                        type="radio"
+                        name="switch-four"
+                        value="40"
+                      />
+                      <span class="toggle-outside">
+                        <span class="toggle-inside"></span>
+                      </span>
+                    </div>
+                    <p>Low</p>
+                  </div>
                 </div>
-                <div class="toggle-switch-container">
-                  <p>High</p>
-                  <div class="toggle-switch switch-vertical">
-                    <input
-                      id="toggle-a"
-                      type="radio"
-                      name="switch-two"
-                      checked="checked"
-                    />
-                    <input id="toggle-b" type="radio" name="switch-two" />
-                    <span class="toggle-outside">
-                      <span class="toggle-inside"></span>
-                    </span>
-                  </div>
-                  <p>Low</p>
-                </div>
-                <div class="toggle-switch-container">
-                  <p>High</p>
-                  <div class="toggle-switch switch-vertical">
-                    <input
-                      id="toggle-a"
-                      type="radio"
-                      name="switch-three"
-                      checked="checked"
-                    />
-                    <input id="toggle-b" type="radio" name="switch-three" />
-                    <span class="toggle-outside">
-                      <span class="toggle-inside"></span>
-                    </span>
-                  </div>
-                  <p>Low</p>
-                </div>
-                <div class="toggle-switch-container">
-                  <p>High</p>
-                  <div class="toggle-switch switch-vertical">
-                    <input
-                      id="toggle-a"
-                      type="radio"
-                      name="switch-four"
-                      checked="checked"
-                    />
-                    <input id="toggle-b" type="radio" name="switch-four" />
-                    <span class="toggle-outside">
-                      <span class="toggle-inside"></span>
-                    </span>
-                  </div>
-                  <p>Low</p>
+                <div class="power-screen__votage-output-container">
+                  <p>Required voltage: 220V</p>
+                  <p>Current voltage: <span id="current-voltage"></span></p>
                 </div>
               </div>
               <div

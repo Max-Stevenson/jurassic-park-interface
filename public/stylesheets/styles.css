@@ -682,6 +682,10 @@ body {
     background: linear-gradient(#f9fb07, #f9fb07 50%, #000e0d 50%);
   }
 }
+#power-display__inner {
+  flex-direction: column;
+}
+
 .power-screen__button-container {
   display: flex;
   flex-direction: column;
@@ -717,6 +721,10 @@ body {
 .power-screen__contact-position-container, .power-screen__stored-energy-container {
   text-align: center;
   border-bottom: white solid 2px;
+}
+
+.power-screen__voltage-switches-container {
+  display: flex;
 }
 
 .power-screen__warning-text {

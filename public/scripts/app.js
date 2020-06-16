@@ -25,6 +25,27 @@ document.getElementById("start-timer").addEventListener("click", () => {
 });
 ////////////////////////
 
+// Voltage toggles
+const voltageDisplay = document.getElementById("current-voltage");
+const voltageToggleInputs = document.querySelectorAll('input[type="radio"]');
+let totalVoltage = 0;
+
+for (let i = 0; i < voltageToggleInputs.length; i++) {
+  voltageToggleInputs[i].addEventListener("click", () => {
+    totalVoltage += parseInt(voltageToggleInputs[i].value);
+    voltageDisplay.innerHTML = totalVoltage + "V";
+  });
+}
+
+for (let i = 0; i < voltageToggleInputs.length; i++) {
+  if (voltageToggleInputs[i].checked) {
+    totalVoltage += parseInt(voltageToggleInputs[i].value);
+  }
+}
+voltageDisplay.innerHTML = totalVoltage + "V";
+
+////////////////////////
+
 // Control panel buttons
 const topControlPanelButtons = document.getElementsByClassName(
   "control-panel__button-display"
