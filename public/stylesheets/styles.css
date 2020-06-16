@@ -233,6 +233,8 @@ body {
 .toggle-switch-container {
   align-content: center;
   padding: 30px;
+  display: flex;
+  flex-direction: column;
 }
 
 .toggle-switch {
