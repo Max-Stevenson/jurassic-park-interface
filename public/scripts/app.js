@@ -29,27 +29,17 @@ document.getElementById("start-timer").addEventListener("click", () => {
 const voltageDisplay = document.getElementById("current-voltage");
 const voltageToggleInputs = document.querySelectorAll('input[type="radio"]');
 
-let totalVoltage = 0;
-const checkVoltage = () => {
-  for (let i = 0; i < voltageToggleInputs.length; i++) {
-    if (voltageToggleInputs[i].checked) {
-      totalVoltage = parseInt(voltageToggleInputs[i].value);
-    }
-  }
-
-  // totalVoltage = voltageToggleInputs[0].checked
-  //   ? parseInt(voltageToggleInputs[0].value)
-  //   : parseInt(voltageToggleInputs[1].value);
-  voltageDisplay.innerHTML = totalVoltage + "V";
-};
-
 for (let i = 0; i < voltageToggleInputs.length; i++) {
-  voltageToggleInputs[i].addEventListener("change", () => {
-    checkVoltage();
+  voltageToggleInputs[i].addEventListener("click", event => {
+    let totalVoltage = 0;
+    for (let i = 0; i < voltageToggleInputs.length; i++) {
+      if (voltageToggleInputs[i].checked) {
+        totalVoltage += parseInt(voltageToggleInputs[i].value);
+      }
+    }
+    voltageDisplay.innerHTML = totalVoltage + "V";
   });
 }
-
-checkVoltage();
 
 ////////////////////////
 
