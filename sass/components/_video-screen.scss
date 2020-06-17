@@ -98,6 +98,7 @@
 
 #power-display__inner {
   flex-direction: column;
+  min-width: 486.84px;
 }
 
 .power-screen__button-container {
@@ -159,7 +160,7 @@
 }
 
 #charge-status {
-  background-color: #f6e100;
+  background-color: white;
 }
 
 #contact-status {

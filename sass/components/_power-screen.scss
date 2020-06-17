@@ -1,19 +1,26 @@
 .power-screen__breaker-container {
-
 }
 
 .breaker-wrapper {
-  background-color: #FB6D7E;
-}
-
-.breaker-buttons__wrapper {
-
-}
-
-.breaker-label__wrapper {
+  display: flex;
   
 }
 
-.breaker-label__text {
+.breaker-buttons__wrapper {
+  display: flex;
+  flex-direction: column;
+}
 
+.breaker-label__wrapper {
+  background-color: #fb6d7e;
+}
+
+.breaker-label__text {
+  background-color: white;
+  color: black;
+  text-transform: uppercase;
+}
+
+.breaker-button {
+  flex: 1;
 }

@@ -56,6 +56,7 @@ chargeButton.addEventListener("click", () => {
   let currentVoltage = parseInt(voltageDisplay.innerHTML);
   if (currentVoltage === 220) {
     chargeStatus.innerHTML = "Charged";
+    chargeStatus.style.backgroundColor = "#f6e100"
   } else {
     chargeStatus.innerHTML = "Discharged";
   }
@@ -68,6 +69,9 @@ const breakerStatus = document.getElementById("contact-status");
 closeButton.addEventListener("click", () => {
   if (chargeStatus.innerHTML === "Charged") {
     breakerStatus.innerHTML = "Closed";
+    breakerStatus.style.backgroundColor = "red";
+    chargeStatus.innerHTML = "Discharged";
+    chargeStatus.style.backgroundColor = "white";
   }
 });
 ////////////////////////
@@ -75,9 +79,9 @@ closeButton.addEventListener("click", () => {
 // Open code
 const openButton = document.getElementById("power-open");
 openButton.addEventListener("click", () => {
-  if (chargeStatus.innerHTML === "Charged" && breakerStatus.innerHTML === "Closed") {
-    chargeStatus.innerHTML = "Discharged";
+  if (breakerStatus.innerHTML === "Closed") {
     breakerStatus.innerHTML = "Open";
+    breakerStatus.style.backgroundColor = "#148e42";
     for (let i = 0; i < voltageToggleInputs.length; i++) {
       if (i % 2 === 0) {
         voltageToggleInputs[i].click();

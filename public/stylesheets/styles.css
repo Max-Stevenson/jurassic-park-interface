@@ -684,6 +684,7 @@ body {
 }
 #power-display__inner {
   flex-direction: column;
+  min-width: 486.84px;
 }
 
 .power-screen__button-container {
@@ -745,7 +746,7 @@ body {
 }
 
 #charge-status {
-  background-color: #f6e100;
+  background-color: white;
 }
 
 #contact-status {
@@ -884,7 +885,26 @@ body {
 }
 
 .breaker-wrapper {
-  background-color: #FB6D7E;
+  display: flex;
+}
+
+.breaker-buttons__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.breaker-label__wrapper {
+  background-color: #fb6d7e;
+}
+
+.breaker-label__text {
+  background-color: white;
+  color: black;
+  text-transform: uppercase;
+}
+
+.breaker-button {
+  flex: 1;
 }
 
 /*# sourceMappingURL=styles.css.map */
