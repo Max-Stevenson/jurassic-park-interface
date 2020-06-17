@@ -72,6 +72,21 @@ closeButton.addEventListener("click", () => {
 });
 ////////////////////////
 
+// Open code
+const openButton = document.getElementById("power-open");
+openButton.addEventListener("click", () => {
+  if (chargeStatus.innerHTML === "Charged" && breakerStatus.innerHTML === "Closed") {
+    chargeStatus.innerHTML = "Discharged";
+    breakerStatus.innerHTML = "Open";
+    for (let i = 0; i < voltageToggleInputs.length; i++) {
+      if (i % 2 === 0) {
+        voltageToggleInputs[i].click();
+      }
+    }
+  }
+});
+////////////////////////
+
 // Control panel buttons
 const topControlPanelButtons = document.getElementsByClassName(
   "control-panel__button-display"
