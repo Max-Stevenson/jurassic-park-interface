@@ -56,7 +56,7 @@ chargeButton.addEventListener("click", () => {
   let currentVoltage = parseInt(voltageDisplay.innerHTML);
   if (currentVoltage === 220) {
     chargeStatus.innerHTML = "Charged";
-    chargeStatus.style.backgroundColor = "#f6e100"
+    chargeStatus.style.backgroundColor = "#f6e100";
   } else {
     chargeStatus.innerHTML = "Discharged";
   }
@@ -89,6 +89,7 @@ openButton.addEventListener("click", () => {
       }
     }
   }
+  resetCircuitBreakers();
 });
 ////////////////////////
 
@@ -133,7 +134,7 @@ const changeScreenContent = event => {
   const mainDisplayElements = document.getElementsByClassName("main-display");
   const tabContentElements = document.getElementsByClassName(
     "video-screen__tab-content"
-  );  
+  );
 
   for (let i = 0; i < tabContentElements.length; i++) {
     if (tabContentElements[i].id === `video-screen__${selectedTab}`) {
@@ -155,7 +156,9 @@ const changeScreenContent = event => {
 
 // Circuit Breaker Init
 const initCircuitBreakers = () => {
-  const breakerWrappers = document.getElementsByClassName("breaker-label__wrapper");
+  const breakerWrappers = document.getElementsByClassName(
+    "breaker-label__wrapper"
+  );
   const breakerLabels = document.getElementsByClassName("breaker-label__text");
   const breakerOnButtons = document.getElementsByClassName("breaker-on");
   const breakerOffButtons = document.getElementsByClassName("breaker-off");
@@ -163,13 +166,33 @@ const initCircuitBreakers = () => {
   for (let i = 0; i < breakerWrappers.length; i++) {
     breakerOffButtons[i].style.backgroundColor = "#99E3C0";
     breakerLabels[i].style.backgroundColor = "#c2a693";
-    breakerOnButtons[i].addEventListener("click", (event) => {
-      event.target.parentElement.lastElementChild.style.backgroundColor = "#1F1115";
-      event.target.parentElement.nextElementSibling.style.backgroundColor = "#C23457";
+    breakerOnButtons[i].addEventListener("click", event => {
+      event.target.parentElement.lastElementChild.style.backgroundColor =
+        "#1F1115";
+      event.target.parentElement.nextElementSibling.style.backgroundColor =
+        "#C23457";
       event.target.style.backgroundColor = "#E40141";
-    })
+    });
   }
-}
+};
+////////////////////////
+
+// Circuit Breaker Reset
+const resetCircuitBreakers = () => {
+  const breakerWrappers = document.getElementsByClassName(
+    "breaker-label__wrapper"
+  );
+  const breakerLabels = document.getElementsByClassName("breaker-label__text");
+  const breakerOnButtons = document.getElementsByClassName("breaker-on");
+  const breakerOffButtons = document.getElementsByClassName("breaker-off");
+
+  for (let i = 0; i < breakerWrappers.length; i++) {
+    breakerWrappers[i].style.backgroundColor = "#1F1115";
+    breakerLabels[i].style.backgroundColor = "#37291f";
+    breakerOnButtons[i].style.backgroundColor = "#1F1115";
+    breakerOffButtons[i].style.backgroundColor = "#1F1115";
+  }
+};
 ////////////////////////
 
 // Trash modal
@@ -188,23 +211,3 @@ trashIcon.addEventListener("click", () => {
   trashModal.classList.add("modal-active");
 });
 ////////////////////////
-
-// user clicks start button
-
-// loop through DOM and add interactivity to all elements with interactive class
-
-// init steps to win as 0 (have to complete 10 to win)
-
-// take instruction from array and show on screen
-
-// start 2 minute timer
-
-// take instruction interaction object and listen for click
-
-// after a timer or inccorect number of clicks display a hint for the object (flashing or hightlight border?)
-
-// once clicked check for if last instruction
-
-// if so, display win message, if not pull next instruction from array and show on screen
-
-// if time expires display lose message
