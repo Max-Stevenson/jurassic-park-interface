@@ -132,10 +132,7 @@ const changeScreenContent = event => {
   const mainDisplayElements = document.getElementsByClassName("main-display");
   const tabContentElements = document.getElementsByClassName(
     "video-screen__tab-content"
-  );
-
-  console.log(selectedTab);
-  
+  );  
 
   for (let i = 0; i < tabContentElements.length; i++) {
     if (tabContentElements[i].id === `video-screen__${selectedTab}`) {

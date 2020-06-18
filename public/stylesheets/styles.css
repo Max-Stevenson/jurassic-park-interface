@@ -738,6 +738,7 @@ body {
 
 .power-screen__voltage-switches-container {
   display: flex;
+  justify-content: center;
 }
 
 .power-screen__warning-text {
@@ -903,27 +904,58 @@ body {
   display: none;
 }
 
+.power-screen__breaker-container {
+  display: flex;
+  flex: 1;
+  margin-bottom: 5px;
+}
+
 .breaker-wrapper {
   display: flex;
+  flex: 1;
+}
+
+.power-screen__breaker-parent {
+  align-self: center;
+  width: fit-content;
 }
 
 .breaker-buttons__wrapper {
   display: flex;
+  justify-content: space-evenly;
   flex-direction: column;
 }
 
 .breaker-label__wrapper {
-  background-color: #fb6d7e;
+  background-color: #C23457;
+  padding: 10px;
+  flex: 1;
+  text-align: center;
+}
+
+.power-screen__voltage-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#power-display__inner > div.power-screen__votage-output-container {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .breaker-label__text {
-  background-color: white;
   color: black;
+  font-size: 14px;
   text-transform: uppercase;
+  border: 2px solid black;
+  padding: 4px;
+  background-color: #c2a693;
+  margin: 0 auto;
 }
 
 .breaker-button {
-  flex: 1;
+  width: 20px;
+  height: 20px;
 }
 
 /*# sourceMappingURL=styles.css.map */
