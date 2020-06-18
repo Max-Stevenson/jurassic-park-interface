@@ -161,9 +161,13 @@ const initCircuitBreakers = () => {
   const breakerOffButtons = document.getElementsByClassName("breaker-off");
 
   for (let i = 0; i < breakerWrappers.length; i++) {
-    breakerWrappers[i].style.backgroundColor = "#C23457";
-    breakerOnButtons[i].style.backgroundColor = "#E40141";
+    breakerOffButtons[i].style.backgroundColor = "#99E3C0";
     breakerLabels[i].style.backgroundColor = "#c2a693";
+    breakerOnButtons[i].addEventListener("click", (event) => {
+      event.target.parentElement.lastElementChild.style.backgroundColor = "#1F1115";
+      event.target.parentElement.nextElementSibling.style.backgroundColor = "#C23457";
+      event.target.style.backgroundColor = "#E40141";
+    })
   }
 }
 ////////////////////////
