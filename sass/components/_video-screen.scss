@@ -1,7 +1,6 @@
 .control-panel__video-screen {
   margin-bottom: 10px;
-  min-height: 267px;
-  max-height: 267px;
+  flex: 0 0 248px;
 }
 
 .video-screen {
@@ -98,7 +97,6 @@
 
 #power-display__inner {
   flex-direction: column;
-  min-width: 486.84px;
 }
 
 .power-screen__button-container {
@@ -130,7 +128,7 @@
 }
 
 .power-button__text {
-  margin: 8px 0px;
+  margin: 6px 0px;
 }
 
 .power-screen__contact-position-container, .power-screen__stored-energy-container {
@@ -147,7 +145,7 @@
   margin: 0;
   font-size: x-small;
   padding-left: 10px;
-  padding-top: 10px;
+  padding-top: 5px;
 }
 
 .power-screen__status-text {

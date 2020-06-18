@@ -28,32 +28,46 @@ body {
 }
 
 #grid-container {
-  display: grid;
-  grid-template-rows: auto auto;
-  grid-template-columns: auto auto;
-  justify-items: stretch;
-  height: 100%;
+  display: flex;
+  flex: 1;
+}
+
+#main-left__container, #main-right__container {
+  display: flex;
+  flex-direction: column;
+}
+
+#main-left__container {
+  flex: 0 0 463px;
+}
+
+#main-right__container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
 }
 
 #outer-container__outer {
-  max-width: 90%;
+  display: flex;
+  flex: 0 0 836px;
   height: 100%;
 }
 
 #outer-container__inner {
   height: 100%;
+  display: flex;
+  flex: 1;
 }
 
 #console-display {
-  grid-area: 4/1/5/2;
+  flex: 0 0 70px;
 }
 
 #control-panel {
-  grid-area: 1/2/4/3;
+  flex: 1;
 }
 
 #tour-display__outer {
-  grid-area: 1/1/4/2;
   display: flex;
   flex-direction: column;
 }
@@ -585,8 +599,7 @@ body {
 
 .control-panel__video-screen {
   margin-bottom: 10px;
-  min-height: 267px;
-  max-height: 267px;
+  flex: 0 0 248px;
 }
 
 .video-screen {
@@ -684,7 +697,6 @@ body {
 }
 #power-display__inner {
   flex-direction: column;
-  min-width: 486.84px;
 }
 
 .power-screen__button-container {
@@ -716,7 +728,7 @@ body {
 }
 
 .power-button__text {
-  margin: 8px 0px;
+  margin: 6px 0px;
 }
 
 .power-screen__contact-position-container, .power-screen__stored-energy-container {
@@ -733,7 +745,7 @@ body {
   margin: 0;
   font-size: x-small;
   padding-left: 10px;
-  padding-top: 10px;
+  padding-top: 5px;
 }
 
 .power-screen__status-text {
@@ -814,6 +826,12 @@ body {
 
 #system-icons__container {
   display: flex;
+  flex: 0 0 70px;
+}
+
+#system-icons__container > div, #system-icons__container > div > div {
+  display: flex;
+  flex: 1;
 }
 
 #system-icons__wrapper {
@@ -834,6 +852,7 @@ body {
   justify-self: center;
   align-self: center;
   padding: 2px;
+  margin: 2px 0;
 }
 
 #trash-icon-wrapper {
