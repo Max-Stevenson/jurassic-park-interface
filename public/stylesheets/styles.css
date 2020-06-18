@@ -915,6 +915,14 @@ body {
   flex: 1;
 }
 
+.breaker-off {
+  background-color: #1F1115;
+}
+
+.breaker-on {
+  background-color: #1F1115;
+}
+
 .power-screen__breaker-parent {
   align-self: center;
   width: fit-content;
@@ -927,7 +935,7 @@ body {
 }
 
 .breaker-label__wrapper {
-  background-color: #C23457;
+  background-color: #1F1115;
   padding: 10px;
   flex: 1;
   text-align: center;
@@ -949,7 +957,7 @@ body {
   text-transform: uppercase;
   border: 2px solid black;
   padding: 4px;
-  background-color: #c2a693;
+  background-color: #37291f;
   margin: 0 auto;
 }
 

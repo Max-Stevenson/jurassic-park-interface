@@ -9,13 +9,13 @@
   flex: 1;
 }
 
-#breaker-off {
+.breaker-off {
   // background-color: #99E3C0;
-  // background-color: #1F1115;
+  background-color: #1F1115;
 }
 
-#breaker-on {
-  // background-color: #1F1115;
+.breaker-on {
+  background-color: #1F1115;
   //background-color: #E40141 - on;
 }
 
@@ -31,8 +31,8 @@
 }
 
 .breaker-label__wrapper {
-  // background-color: #1F1115;
-  background-color: #C23457;
+  background-color: #1F1115;
+  // background-color: #C23457;
   padding: 10px;
   flex: 1;
   text-align: center;
@@ -56,7 +56,7 @@
   text-transform: uppercase;
   border: 2px solid black;
   padding: 4px;
-  background-color: #c2a693; // activated
+  background-color: darken($color: #c2a693, $amount: 50%) ; // activated
   margin: 0 auto;
 }
 

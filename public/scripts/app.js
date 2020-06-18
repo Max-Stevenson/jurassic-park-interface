@@ -72,6 +72,7 @@ closeButton.addEventListener("click", () => {
     breakerStatus.style.backgroundColor = "red";
     chargeStatus.innerHTML = "Discharged";
     chargeStatus.style.backgroundColor = "white";
+    initCircuitBreakers();
   }
 });
 ////////////////////////
@@ -150,6 +151,21 @@ const changeScreenContent = event => {
     }
   }
 };
+////////////////////////
+
+// Circuit Breaker Init
+const initCircuitBreakers = () => {
+  const breakerWrappers = document.getElementsByClassName("breaker-label__wrapper");
+  const breakerLabels = document.getElementsByClassName("breaker-label__text");
+  const breakerOnButtons = document.getElementsByClassName("breaker-on");
+  const breakerOffButtons = document.getElementsByClassName("breaker-off");
+
+  for (let i = 0; i < breakerWrappers.length; i++) {
+    breakerWrappers[i].style.backgroundColor = "#C23457";
+    breakerOnButtons[i].style.backgroundColor = "#E40141";
+    breakerLabels[i].style.backgroundColor = "#c2a693";
+  }
+}
 ////////////////////////
 
 // Trash modal
