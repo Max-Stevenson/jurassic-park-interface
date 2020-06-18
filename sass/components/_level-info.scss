@@ -1,5 +1,4 @@
 .room-info__container {
-  grid-area: 3 / 1 / 4 / 2;
   background-color: #e2eb57;
   padding: 3px;
   display: flex;
@@ -7,7 +6,8 @@
 }
 
 .room-info__level-display {
-  width: fit-content;
+  display: flex;
+  flex-direction: column;
 }
 
 .room-info__level-text {
@@ -16,8 +16,9 @@
   width: fit-content;
   padding: 1px 8px;
   text-align: center;
-  margin-bottom: 5px;
-  margin-top: 5px;
+  margin-bottom: 2px;
+  margin-top: 2px;
+  font-size: small;
 }
 
 .room-info__level-number {
@@ -27,8 +28,9 @@
   color: white;
   background-color: black;
   font-weight: bolder;
-  font-size: 50px;
-  margin: 5px 0 0 0;
+  font-size: 30px;
+  margin: 2px 0 0 0;
+  flex: 1;
 }
 
 .room-info__title-container {
@@ -43,9 +45,9 @@
   background-color: black;
   text-align: center;
   font-style: italic;
-  margin: 5px 8px;
+  margin: 2px 8px;
   padding: 8px 0;
-  font-size: x-large;
+  font-size: large;
 }
 
 .room-info__subtitle {
@@ -53,6 +55,7 @@
   background-color: black;
   text-align: center;
   font-style: italic;
+  font-size: small;
   padding: 4px 36px;
   margin: 5px 8px 0px 8px;
 }
