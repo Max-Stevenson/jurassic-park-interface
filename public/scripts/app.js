@@ -134,6 +134,9 @@ const changeScreenContent = event => {
     "video-screen__tab-content"
   );
 
+  console.log(selectedTab);
+  
+
   for (let i = 0; i < tabContentElements.length; i++) {
     if (tabContentElements[i].id === `video-screen__${selectedTab}`) {
       tabContentElements[i].style.display = "flex";
