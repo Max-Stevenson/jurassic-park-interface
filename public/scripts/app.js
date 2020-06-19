@@ -166,16 +166,17 @@ const initCircuitBreakers = () => {
   for (let i = 0; i < breakerWrappers.length; i++) {
     breakerOffButtons[i].style.backgroundColor = "#99E3C0";
     breakerLabels[i].style.backgroundColor = "#c2a693";
-    breakerOnButtons[i].addEventListener("click", event => {
-      event.target.parentElement.lastElementChild.style.backgroundColor =
-        "#1F1115";
-      event.target.parentElement.nextElementSibling.style.backgroundColor =
-        "#C23457";
-      event.target.style.backgroundColor = "#E40141";
-    });
+    breakerOnButtons[i].addEventListener("click", handleBreakerOn);
   }
 };
 ////////////////////////
+
+const handleBreakerOn = event => {
+  event.target.parentElement.lastElementChild.style.backgroundColor = "#1F1115";
+  event.target.parentElement.nextElementSibling.style.backgroundColor =
+    "#C23457";
+  event.target.style.backgroundColor = "#E40141";
+};
 
 // Circuit Breaker Reset
 const resetCircuitBreakers = () => {
@@ -191,6 +192,7 @@ const resetCircuitBreakers = () => {
     breakerLabels[i].style.backgroundColor = "#37291f";
     breakerOnButtons[i].style.backgroundColor = "#1F1115";
     breakerOffButtons[i].style.backgroundColor = "#1F1115";
+    breakerOnButtons[i].removeEventListener("click", handleBreakerOn);
   }
 };
 ////////////////////////
@@ -210,4 +212,4 @@ trashIcon.addEventListener("click", () => {
   trashModal.classList.remove("modal-inactive");
   trashModal.classList.add("modal-active");
 });
-////////////////////////
+///////////////////
