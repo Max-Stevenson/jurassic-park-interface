@@ -128,6 +128,41 @@ for (let i = 0; i < topControlPanelButtons.length; i++) {
 }
 ////////////////////////
 
+// Bottom control panel buttons
+const bottomControlPanelButtons = document.getElementsByClassName(
+  "control-panel__button-display"
+)[1].children;
+for (let i = 0; i < bottomControlPanelButtons.length; i++) {
+  let button = bottomControlPanelButtons[i];
+  button.addEventListener("click", event => {
+    for (let k = 0; k < bottomControlPanelButtons.length; k++) {
+      let prevButton = bottomControlPanelButtons[k];
+      if (prevButton.classList.contains("button__depressed")) {
+        prevButton.classList.remove("button__depressed");
+        prevButton.classList.add("outer-edge__light");
+        prevButton.firstElementChild.classList.add("inner-edge__light");
+        prevButton.firstElementChild
+          .querySelector("p")
+          .classList.remove("button-text__embossed");
+        prevButton.firstElementChild
+          .querySelector("p")
+          .classList.add("button-text__engraved");
+      }
+    }
+    button.classList.add("button__depressed");
+    button.classList.remove("outer-edge__light");
+    button.firstElementChild.classList.remove("inner-edge__light");
+    button.firstElementChild
+      .querySelector("p")
+      .classList.add("button-text__embossed");
+    button.firstElementChild
+      .querySelector("p")
+      .classList.remove("button-text__engraved");
+  });
+}
+
+////////////////////////
+
 // Video screen tab change
 const changeScreenContent = event => {
   let selectedTab = event.currentTarget.lastElementChild.firstElementChild.innerHTML.toLowerCase();
@@ -167,16 +202,30 @@ const initCircuitBreakers = () => {
     breakerOffButtons[i].style.backgroundColor = "#99E3C0";
     breakerLabels[i].style.backgroundColor = "#c2a693";
     breakerOnButtons[i].addEventListener("click", handleBreakerOn);
+    breakerOffButtons[i].addEventListener("click", handleBreakerOff);
   }
 };
 ////////////////////////
 
+// Breaker On
 const handleBreakerOn = event => {
   event.target.parentElement.lastElementChild.style.backgroundColor = "#1F1115";
   event.target.parentElement.nextElementSibling.style.backgroundColor =
     "#C23457";
   event.target.style.backgroundColor = "#E40141";
 };
+////////////////////////
+
+// Breaker Off
+const handleBreakerOff = event => {
+  event.target.parentElement.firstElementChild.style.backgroundColor =
+    "#1F1115";
+  event.target.parentElement.lastElementChild.style.backgroundColor =
+    "rgb(153, 227, 192)";
+  event.target.parentElement.nextElementSibling.style.backgroundColor =
+    "#1F1115";
+};
+////////////////////////
 
 // Circuit Breaker Reset
 const resetCircuitBreakers = () => {
@@ -193,6 +242,7 @@ const resetCircuitBreakers = () => {
     breakerOnButtons[i].style.backgroundColor = "#1F1115";
     breakerOffButtons[i].style.backgroundColor = "#1F1115";
     breakerOnButtons[i].removeEventListener("click", handleBreakerOn);
+    breakerOffButtons[i].removeEventListener("click", handleBreakerOff);
   }
 };
 ////////////////////////
