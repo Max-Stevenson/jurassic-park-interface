@@ -158,6 +158,7 @@ for (let i = 0; i < bottomControlPanelButtons.length; i++) {
     button.firstElementChild
       .querySelector("p")
       .classList.remove("button-text__engraved");
+    changeBottomScreenContent(event);
   });
 }
 
@@ -244,6 +245,13 @@ const resetCircuitBreakers = () => {
     breakerOnButtons[i].removeEventListener("click", handleBreakerOn);
     breakerOffButtons[i].removeEventListener("click", handleBreakerOff);
   }
+};
+////////////////////////
+
+// Change Bottom Video Screen
+const changeBottomScreenContent = event => {
+  let selectedTab = event.currentTarget.lastElementChild.firstElementChild.innerHTML.toLowerCase();
+  console.log(selectedTab);
 };
 ////////////////////////
 
