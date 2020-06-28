@@ -828,6 +828,10 @@ body {
   font-style: italic;
 }
 
+.output-display__hidden {
+  display: none;
+}
+
 #system-icons__container {
   display: flex;
   flex: 0 0 70px;
