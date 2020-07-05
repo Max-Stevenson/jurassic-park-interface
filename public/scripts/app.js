@@ -251,7 +251,27 @@ const resetCircuitBreakers = () => {
 // Change Bottom Video Screen
 const changeBottomScreenContent = event => {
   let selectedTab = event.currentTarget.lastElementChild.firstElementChild.innerHTML.toLowerCase();
-  console.log(selectedTab);
+
+  const mainDisplayElements = document.getElementsByClassName("main-display");
+  const tabContentElements = document.getElementsByClassName(
+    "ouput-display__wrapper"
+  );
+
+  for (let i = 0; i < tabContentElements.length; i++) {
+    if (tabContentElements[i].id === `video-screen__${selectedTab}`) {
+      tabContentElements[i].style.display = "flex";
+    } else {
+      tabContentElements[i].style.display = "none";
+    }
+  }
+
+  for (let i = 0; i < mainDisplayElements.length; i++) {
+    if (mainDisplayElements[i].id === `${selectedTab}-display__inner`) {
+      mainDisplayElements[i].style.display = "flex";
+    } else {
+      mainDisplayElements[i].style.display = "none";
+    }
+  }
 };
 ////////////////////////
 
