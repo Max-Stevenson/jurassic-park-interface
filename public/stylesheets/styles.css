@@ -388,6 +388,10 @@ body {
   font-style: italic;
 }
 
+#tour-display__wrapper-right, #tour-display__wrapper-left {
+  width: 43px;
+}
+
 #sys-one {
   writing-mode: vertical-rl;
   text-orientation: mixed;

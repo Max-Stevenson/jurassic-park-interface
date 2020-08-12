@@ -291,3 +291,15 @@ trashIcon.addEventListener("click", () => {
   trashModal.classList.add("modal-active");
 });
 ///////////////////
+
+// Instructions Content
+const powerInstructionsOne = `Your next step is to help restore power to the main systems of the park. Lucky for you the physical fusebox has been replaced and is now a virtual interface that is running on backup power, but you'll still need to follow the steps to get full power on again.`;
+
+const powerInstructionsTwo = `Begin by toggling the breaker switches until the current voltage matches the required voltage`;
+
+const powerInstructionsThree = `Good the next step is to charge the breaker capacitor - push the yellow button`;
+
+const powerInstructionsFour = `Now, under the words "contact position" there's a round green button that says "push to close!", push it!`;
+
+const powerInstructionsFive = `Final step. The red buttons turn on the individual park systems. Switch them on.`;
+///////////////////
