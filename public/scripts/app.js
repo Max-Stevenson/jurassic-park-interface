@@ -22,75 +22,116 @@ document.getElementById("start-timer").addEventListener("click", () => {
   const twoMinutes = 60 * 2;
   const display = document.getElementById("countdown-timer__display");
   startTimer(twoMinutes, display);
+  document.getElementById("start-timer").disabled = true;
 });
 ////////////////////////
 
-// Voltage toggles
-const voltageDisplay = document.getElementById("current-voltage");
-const voltageToggleInputs = document.querySelectorAll('input[type="radio"]');
-
-const updateVoltage = () => {
-  let totalVoltage = 0;
-  for (let i = 0; i < voltageToggleInputs.length; i++) {
-    if (voltageToggleInputs[i].checked) {
-      totalVoltage += parseInt(voltageToggleInputs[i].value);
-    }
-  }
-  voltageDisplay.innerHTML = totalVoltage;
+// Enable Instructions
+const loadInstructions = instructionArr => {
+  const instructionsDisplay = document.querySelector(
+    ".instructions-text__content"
+  );
+  instructionsDisplay.innerHTML = `${instructionArr[0]}<br><br>${
+    instructionArr[1]
+  }`;
 };
 
-for (let i = 0; i < voltageToggleInputs.length; i++) {
-  voltageToggleInputs[i].addEventListener("click", event => {
-    updateVoltage();
-  });
-}
+const advanceInstructions = () => {};
 
-updateVoltage();
+const getCurrentInstructionIdx = () => {};
 
-////////////////////////
+const showNextStep = (instructionArr, instructionStep) => {
+  const instructionsDisplay = document.querySelector(
+    ".instructions-text__content"
+  );
 
-// Charge code
-const chargeButton = document.getElementById("power-charge");
-const chargeStatus = document.getElementById("charge-status");
-chargeButton.addEventListener("click", () => {
-  let currentVoltage = parseInt(voltageDisplay.innerHTML);
-  if (currentVoltage === 220) {
-    chargeStatus.innerHTML = "Charged";
-    chargeStatus.style.backgroundColor = "#f6e100";
-  } else {
-    chargeStatus.innerHTML = "Discharged";
-  }
-});
-////////////////////////
+  instructionsDisplay.innerHTML = `${instructionArr[instructionStep]}`;
+};
 
-// Contact code
-const closeButton = document.getElementById("power-close");
-const breakerStatus = document.getElementById("contact-status");
-closeButton.addEventListener("click", () => {
-  if (chargeStatus.innerHTML === "Charged") {
-    breakerStatus.innerHTML = "Closed";
-    breakerStatus.style.backgroundColor = "red";
-    chargeStatus.innerHTML = "Discharged";
-    chargeStatus.style.backgroundColor = "white";
-    initCircuitBreakers();
-  }
-});
-////////////////////////
+const enablePower = () => {
+  let instructionStep = 1;
+  const powerInstructionsArr = [
+    `Your first step is to help restore power to the main systems of the park. Lucky for you the physical fusebox has been replaced and is now a virtual interface that is running on backup power, but you'll still need to follow the steps to get full power on again.`,
+    `Begin by toggling the breaker switches until the current voltage matches the required voltage.`,
+    `Good the next step is to charge the breaker capacitor - push the yellow button.`,
+    `Now, under the words "contact position" there's a round green button that says "push to close!", push it!`,
+    `Final step. The red buttons turn on the individual park systems. Switch them on.`
+  ];
 
-// Open code
-const openButton = document.getElementById("power-open");
-openButton.addEventListener("click", () => {
-  if (breakerStatus.innerHTML === "Closed") {
-    breakerStatus.innerHTML = "Open";
-    breakerStatus.style.backgroundColor = "#148e42";
+  loadInstructions(powerInstructionsArr);
+  // Voltage toggles
+  const voltageDisplay = document.getElementById("current-voltage");
+  const voltageToggleInputs = document.querySelectorAll('input[type="radio"]');
+
+  const updateVoltage = () => {
+    let targetVoltage = 220;
+    let totalVoltage = 0;
     for (let i = 0; i < voltageToggleInputs.length; i++) {
-      if (i % 2 === 0) {
-        voltageToggleInputs[i].click();
+      if (voltageToggleInputs[i].checked) {
+        totalVoltage += parseInt(voltageToggleInputs[i].value);
       }
     }
+    voltageDisplay.innerHTML = totalVoltage;
+    if (totalVoltage === targetVoltage) {
+      instructionStep++;
+      showNextStep(powerInstructionsArr, instructionStep);
+    }
+  };
+
+  for (let i = 0; i < voltageToggleInputs.length; i++) {
+    voltageToggleInputs[i].addEventListener("click", event => {
+      updateVoltage();
+    });
   }
-  resetCircuitBreakers();
-});
+
+  updateVoltage();
+  ////////////////////////
+  // Charge code
+  const chargeButton = document.getElementById("power-charge");
+  const chargeStatus = document.getElementById("charge-status");
+  const targetVoltage = 220;
+  chargeButton.addEventListener("click", () => {
+    let currentVoltage = parseInt(voltageDisplay.innerHTML);
+    if (currentVoltage === targetVoltage) {
+      chargeStatus.innerHTML = "Charged";
+      chargeStatus.style.backgroundColor = "#f6e100";
+    } else {
+      chargeStatus.innerHTML = "Discharged";
+    }
+  });
+  ////////////////////////
+
+  // Contact code
+  const closeButton = document.getElementById("power-close");
+  const breakerStatus = document.getElementById("contact-status");
+  closeButton.addEventListener("click", () => {
+    if (chargeStatus.innerHTML === "Charged") {
+      breakerStatus.innerHTML = "Closed";
+      breakerStatus.style.backgroundColor = "red";
+      chargeStatus.innerHTML = "Discharged";
+      chargeStatus.style.backgroundColor = "white";
+      initCircuitBreakers();
+    }
+  });
+  ////////////////////////
+
+  // Open code
+  const openButton = document.getElementById("power-open");
+  openButton.addEventListener("click", () => {
+    if (breakerStatus.innerHTML === "Closed") {
+      breakerStatus.innerHTML = "Open";
+      breakerStatus.style.backgroundColor = "#148e42";
+      for (let i = 0; i < voltageToggleInputs.length; i++) {
+        if (i % 2 === 0) {
+          voltageToggleInputs[i].click();
+        }
+      }
+    }
+    resetCircuitBreakers();
+  });
+  ////////////////////////
+};
+enablePower();
 ////////////////////////
 
 // Control panel buttons
@@ -290,16 +331,4 @@ trashIcon.addEventListener("click", () => {
   trashModal.classList.remove("modal-inactive");
   trashModal.classList.add("modal-active");
 });
-///////////////////
-
-// Instructions Content
-const powerInstructionsOne = `Your next step is to help restore power to the main systems of the park. Lucky for you the physical fusebox has been replaced and is now a virtual interface that is running on backup power, but you'll still need to follow the steps to get full power on again.`;
-
-const powerInstructionsTwo = `Begin by toggling the breaker switches until the current voltage matches the required voltage`;
-
-const powerInstructionsThree = `Good the next step is to charge the breaker capacitor - push the yellow button`;
-
-const powerInstructionsFour = `Now, under the words "contact position" there's a round green button that says "push to close!", push it!`;
-
-const powerInstructionsFive = `Final step. The red buttons turn on the individual park systems. Switch them on.`;
 ///////////////////

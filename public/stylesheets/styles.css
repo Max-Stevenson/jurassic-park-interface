@@ -99,6 +99,10 @@ body {
   flex-direction: column;
 }
 
+#main-logo {
+  width: 200px;
+}
+
 .outer-edge__light, .outer-edge__light__no-right-edge {
   border-left: solid 1px #585356;
   border-top: solid 1px #585356;
