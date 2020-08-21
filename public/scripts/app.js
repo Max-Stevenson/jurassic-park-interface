@@ -99,6 +99,8 @@ const enablePower = () => {
     if (currentVoltage === targetVoltage) {
       chargeStatus.innerHTML = "Charged";
       chargeStatus.style.backgroundColor = "#f6e100";
+      instructionStep++;
+      showNextStep(powerInstructionsArr, instructionStep)
     } else {
       chargeStatus.innerHTML = "Discharged";
     }
@@ -114,6 +116,8 @@ const enablePower = () => {
       breakerStatus.style.backgroundColor = "red";
       chargeStatus.innerHTML = "Discharged";
       chargeStatus.style.backgroundColor = "white";
+      instructionStep++;
+      showNextStep(powerInstructionsArr, instructionStep);
       initCircuitBreakers();
     }
   });
