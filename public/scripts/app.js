@@ -57,7 +57,8 @@ const enablePower = () => {
     `Begin by toggling the breaker switches until the current voltage matches the required voltage.`,
     `Good the next step is to charge the breaker capacitor - push the yellow button.`,
     `Now, under the words "contact position" there's a round green button that says "push to close!", push it!`,
-    `Final step. The red buttons turn on the individual park systems. Switch them on.`
+    `Final step. The red buttons turn on the individual park systems. Switch them on.`,
+    `Well done power has been restored to the park. Click on the `
   ];
 
   loadInstructions(powerInstructionsArr);
@@ -100,7 +101,7 @@ const enablePower = () => {
       chargeStatus.innerHTML = "Charged";
       chargeStatus.style.backgroundColor = "#f6e100";
       instructionStep++;
-      showNextStep(powerInstructionsArr, instructionStep)
+      showNextStep(powerInstructionsArr, instructionStep);
     } else {
       chargeStatus.innerHTML = "Discharged";
     }
@@ -208,6 +209,17 @@ const enablePower = () => {
 enablePower();
 ////////////////////////
 
+let prevButton = document.querySelector("div.button__depressed");
+prevButton.classList.remove("button__depressed");
+prevButton.classList.add("outer-edge__light");
+prevButton.firstElementChild.classList.add("inner-edge__light");
+prevButton.firstElementChild
+  .querySelector("p")
+  .classList.remove("button-text__embossed");
+prevButton.firstElementChild
+  .querySelector("p")
+  .classList.add("button-text__engraved");
+
 // Control panel buttons
 const topControlPanelButtons = document.getElementsByClassName(
   "control-panel__button-display"
@@ -215,20 +227,16 @@ const topControlPanelButtons = document.getElementsByClassName(
 for (let i = 0; i < topControlPanelButtons.length; i++) {
   let button = topControlPanelButtons[i];
   button.addEventListener("click", event => {
-    for (let k = 0; k < topControlPanelButtons.length; k++) {
-      let prevButton = topControlPanelButtons[k];
-      if (prevButton.classList.contains("button__depressed")) {
-        prevButton.classList.remove("button__depressed");
-        prevButton.classList.add("outer-edge__light");
-        prevButton.firstElementChild.classList.add("inner-edge__light");
-        prevButton.firstElementChild
-          .querySelector("p")
-          .classList.remove("button-text__embossed");
-        prevButton.firstElementChild
-          .querySelector("p")
-          .classList.add("button-text__engraved");
-      }
-    }
+    let prevButton = document.querySelector("div.button__depressed");
+    prevButton.classList.remove("button__depressed");
+    prevButton.classList.add("outer-edge__light");
+    prevButton.firstElementChild.classList.add("inner-edge__light");
+    prevButton.firstElementChild
+      .querySelector("p")
+      .classList.remove("button-text__embossed");
+    prevButton.firstElementChild
+      .querySelector("p")
+      .classList.add("button-text__engraved");
     button.classList.add("button__depressed");
     button.classList.remove("outer-edge__light");
     button.firstElementChild.classList.remove("inner-edge__light");
@@ -348,3 +356,12 @@ trashIcon.addEventListener("click", () => {
   trashModal.classList.add("modal-active");
 });
 ///////////////////
+
+const systemPasswords = ["kingNedry", "dinoSores", "raptors"];
+
+const systemInstructionsArr = [
+  `Nedry has locked you out of the system. You will need to to enter the password in order to restore access to the other park controls. See if you can find some hint to the password...`
+  `Check the trash bin for any clues...`
+  `Great, now enter the password into the system.`
+  ``
+]
