@@ -360,8 +360,7 @@ trashIcon.addEventListener("click", () => {
 const systemPasswords = ["kingNedry", "dinoSores", "raptors"];
 
 const systemInstructionsArr = [
-  `Nedry has locked you out of the system. You will need to to enter the password in order to restore access to the other park controls. See if you can find some hint to the password...`
-  `Check the trash bin for any clues...`
+  `Nedry has locked you out of the system. You will need to to enter the password in order to restore access to the other park controls. See if you can find some hint to the password...`,
+  `Check the trash bin for any clues...`,
   `Great, now enter the password into the system.`
-  ``
 ]

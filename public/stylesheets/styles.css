@@ -9,6 +9,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  height: 100%;
 }
 
 @media (max-height: 900px) {
@@ -38,7 +39,7 @@ body {
 }
 
 #main-left__container {
-  flex: 0 0 463px;
+  flex: 0 0 60%;
 }
 
 #main-right__container {
@@ -49,7 +50,7 @@ body {
 
 #outer-container__outer {
   display: flex;
-  flex: 0 0 836px;
+  flex: 0 0 60%;
   height: 100%;
 }
 
@@ -373,7 +374,7 @@ body {
   flex: 1;
   justify-content: space-between;
   background-color: black;
-  background-size: 40px 40px;
+  background-size: 3em 3em;
   background-image: linear-gradient(to right, white 1px, transparent 1px), linear-gradient(to bottom, white 1px, transparent 1px);
 }
 
@@ -387,8 +388,8 @@ body {
   display: flex;
   flex: 1;
   justify-content: space-between;
-  border-top: 10px solid #438149;
-  border-bottom: 10px solid #438149;
+  border-top: 1em solid #438149;
+  border-bottom: 1em solid #438149;
   font-style: italic;
 }
 
