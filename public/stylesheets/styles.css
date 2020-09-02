@@ -454,7 +454,7 @@ body {
 }
 
 #tour-display__wrapper-right, #tour-display__wrapper-left {
-  width: 43px;
+  width: 12%;
 }
 
 #sys-one {
@@ -464,7 +464,7 @@ body {
 
 #sys-one,
 #sys-four {
-  font-size: 38px;
+  font-size: 3vw;
 }
 
 #sys-two {
@@ -477,7 +477,7 @@ body {
 
 #sys-three,
 #sys-two {
-  font-size: 26px;
+  font-size: 1.5vw;
 }
 
 #sys-four {
@@ -516,7 +516,7 @@ body {
   color: white;
   background-color: black;
   font-weight: bolder;
-  font-size: 30px;
+  font-size: 2.5vw;
   margin: 2px 0 0 0;
   flex: 1;
 }
