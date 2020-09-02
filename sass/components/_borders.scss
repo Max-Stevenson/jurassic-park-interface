@@ -53,10 +53,10 @@
 }
 
 .outer-edge__dark {
-  border-left: solid .1vw #302a2a;
-  border-top: solid .1vw #302a2a;
-  border-right: solid .1vw #c1c2c6;
-  border-bottom: solid .1vw #c1c2c6;
+  border-left: solid .15vw #302a2a;
+  border-top: solid .15vw #302a2a;
+  border-right: solid .15vw #c1c2c6;
+  border-bottom: solid .15vw #c1c2c6;
   border-radius: 1px;
   height: 100%;
 }
@@ -107,19 +107,19 @@
 }
 
 .outer-edge__console {
-  border-top: solid 1px #6A6767;
-  border-right: solid 1px #B1ABAB;
-  border-bottom: solid 1px #B1ABAB;
-  border-left: solid 1px #6A6767;
+  border-top: solid .1vw #6A6767;
+  border-right: solid .1vw #B1ABAB;
+  border-bottom: solid .1vw #B1ABAB;
+  border-left: solid .1vw #6A6767;
   border-radius: 1px;
   height: 100%;
 }
 
 .inner-edge__console {
-  border-top: solid 1px #EAE9E9;
-  border-right: solid 1px #A59B9A;
-  border-bottom: solid 1px #A59B9A;
-  border-left: solid 1px #EAE9E9;
+  border-top: solid .1vw #EAE9E9;
+  border-right: solid .1vw #A59B9A;
+  border-bottom: solid .1vw #A59B9A;
+  border-left: solid .1vw #EAE9E9;
   background-color: white;
   height: 100%;
 }

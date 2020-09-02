@@ -65,7 +65,7 @@ body {
 }
 
 #console-display {
-  flex: 0 0 70px;
+  flex: 0 0 calc(10% - .5vw);
 }
 
 #control-panel {
@@ -163,10 +163,10 @@ body {
 }
 
 .outer-edge__dark, .outer-edge__dark__no-right-edge {
-  border-left: solid 0.1vw #302a2a;
-  border-top: solid 0.1vw #302a2a;
-  border-right: solid 0.1vw #c1c2c6;
-  border-bottom: solid 0.1vw #c1c2c6;
+  border-left: solid 0.15vw #302a2a;
+  border-top: solid 0.15vw #302a2a;
+  border-right: solid 0.15vw #c1c2c6;
+  border-bottom: solid 0.15vw #c1c2c6;
   border-radius: 1px;
   height: 100%;
 }
@@ -211,19 +211,19 @@ body {
 }
 
 .outer-edge__console {
-  border-top: solid 1px #6A6767;
-  border-right: solid 1px #B1ABAB;
-  border-bottom: solid 1px #B1ABAB;
-  border-left: solid 1px #6A6767;
+  border-top: solid 0.1vw #6A6767;
+  border-right: solid 0.1vw #B1ABAB;
+  border-bottom: solid 0.1vw #B1ABAB;
+  border-left: solid 0.1vw #6A6767;
   border-radius: 1px;
   height: 100%;
 }
 
 .inner-edge__console {
-  border-top: solid 1px #EAE9E9;
-  border-right: solid 1px #A59B9A;
-  border-bottom: solid 1px #A59B9A;
-  border-left: solid 1px #EAE9E9;
+  border-top: solid 0.1vw #EAE9E9;
+  border-right: solid 0.1vw #A59B9A;
+  border-bottom: solid 0.1vw #A59B9A;
+  border-left: solid 0.1vw #EAE9E9;
   background-color: white;
   height: 100%;
 }
@@ -487,25 +487,26 @@ body {
 
 .room-info__container {
   background-color: #e2eb57;
-  padding: 3px;
+  padding: 2% 1%;
   display: flex;
   justify-content: space-evenly;
+  flex: 0 0 13%;
 }
 
 .room-info__level-display {
   display: flex;
+  flex: 1;
   flex-direction: column;
 }
 
 .room-info__level-text {
+  font-size: 1vw;
   color: white;
   background: black;
-  width: fit-content;
   padding: 1px 8px;
   text-align: center;
   margin-bottom: 2px;
   margin-top: 2px;
-  font-size: small;
 }
 
 .room-info__level-number {
@@ -522,7 +523,6 @@ body {
 
 .room-info__title-container {
   display: flex;
-  flex: 1;
   flex-direction: column;
   justify-content: space-between;
 }
@@ -532,9 +532,9 @@ body {
   background-color: black;
   text-align: center;
   font-style: italic;
-  margin: 2px 8px;
-  padding: 8px 0;
-  font-size: large;
+  margin: 0.1vw 0.5vw;
+  padding: 0.5vw 1.5vw;
+  font-size: 1.5vw;
 }
 
 .room-info__subtitle {
@@ -874,6 +874,10 @@ body {
   flex: 1;
 }
 
+.control-panel__output-display .inner-edge__light, .control-panel__output-display .inner-edge__light__no-padding {
+  padding: 0.25vw;
+}
+
 .output-display__wrapper {
   display: flex;
   flex-direction: column;
@@ -908,7 +912,7 @@ body {
 
 #system-icons__container {
   display: flex;
-  flex: 0 0 70px;
+  flex: 0 0 calc(10% + .6vw);
 }
 
 #system-icons__container > div, #system-icons__container > div > div {
