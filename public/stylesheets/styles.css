@@ -68,6 +68,10 @@ body {
   flex: 0 0 calc(10% - .5vw);
 }
 
+#console-display > div.inner-edge__light, #console-display > div.inner-edge__light__no-padding {
+  padding: 0.25vw 0.5vw;
+}
+
 #control-panel {
   flex: 1;
 }

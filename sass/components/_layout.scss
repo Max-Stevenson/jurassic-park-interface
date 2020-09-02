@@ -34,6 +34,10 @@
   flex: 0 0 calc(10% - .5vw);
 }
 
+#console-display > div.inner-edge__light {
+  padding: .25vw .5vw;
+}
+
 #control-panel {
   flex: 1;
 }
