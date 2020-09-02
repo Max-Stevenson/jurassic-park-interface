@@ -211,8 +211,8 @@ enablePower();
 
 let prevButton = document.querySelector("div.button__depressed");
 prevButton.classList.remove("button__depressed");
-prevButton.classList.add("outer-edge__light");
-prevButton.firstElementChild.classList.add("inner-edge__light");
+prevButton.classList.add("outer-edge__light-buttons");
+prevButton.firstElementChild.classList.add("inner-edge__light-buttons");
 prevButton.firstElementChild
   .querySelector("p")
   .classList.remove("button-text__embossed");
@@ -229,8 +229,8 @@ for (let i = 0; i < topControlPanelButtons.length; i++) {
   button.addEventListener("click", event => {
     let prevButton = document.querySelector("div.button__depressed");
     prevButton.classList.remove("button__depressed");
-    prevButton.classList.add("outer-edge__light");
-    prevButton.firstElementChild.classList.add("inner-edge__light");
+    prevButton.classList.add("outer-edge__light-buttons");
+    prevButton.firstElementChild.classList.add("inner-edge__light-buttons");
     prevButton.firstElementChild
       .querySelector("p")
       .classList.remove("button-text__embossed");
@@ -238,8 +238,8 @@ for (let i = 0; i < topControlPanelButtons.length; i++) {
       .querySelector("p")
       .classList.add("button-text__engraved");
     button.classList.add("button__depressed");
-    button.classList.remove("outer-edge__light");
-    button.firstElementChild.classList.remove("inner-edge__light");
+    button.classList.remove("outer-edge__light-buttons");
+    button.firstElementChild.classList.remove("inner-edge__light-buttons");
     button.firstElementChild
       .querySelector("p")
       .classList.add("button-text__embossed");
@@ -262,8 +262,8 @@ for (let i = 0; i < bottomControlPanelButtons.length; i++) {
       let prevButton = bottomControlPanelButtons[k];
       if (prevButton.classList.contains("button__depressed")) {
         prevButton.classList.remove("button__depressed");
-        prevButton.classList.add("outer-edge__light");
-        prevButton.firstElementChild.classList.add("inner-edge__light");
+        prevButton.classList.add("outer-edge__light-buttons");
+        prevButton.firstElementChild.classList.add("inner-edge__light-buttons");
         prevButton.firstElementChild
           .querySelector("p")
           .classList.remove("button-text__embossed");
@@ -273,8 +273,8 @@ for (let i = 0; i < bottomControlPanelButtons.length; i++) {
       }
     }
     button.classList.add("button__depressed");
-    button.classList.remove("outer-edge__light");
-    button.firstElementChild.classList.remove("inner-edge__light");
+    button.classList.remove("outer-edge__light-buttons");
+    button.firstElementChild.classList.remove("inner-edge__light-buttons");
     button.firstElementChild
       .querySelector("p")
       .classList.add("button-text__embossed");

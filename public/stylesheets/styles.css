@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 16px;
+}
+
 html,
 body {
   margin: 0;
@@ -105,37 +109,56 @@ body {
 }
 
 .outer-edge__light, .outer-edge__light__no-right-edge {
-  border-left: solid 1px #585356;
-  border-top: solid 1px #585356;
-  border-right: solid 1px #c8c8c8;
-  border-bottom: solid 1px #c8c8c8;
+  border-left: solid 0.15vw #585356;
+  border-top: solid 0.15vw #585356;
+  border-right: solid 0.15vw #c8c8c8;
+  border-bottom: solid 0.15vw #c8c8c8;
   border-radius: 1px;
   background-color: #797979;
   height: 100%;
 }
 
+.outer-edge__light-buttons {
+  border-left: solid 0.1vw #585356;
+  border-top: solid 0.1vw #585356;
+  border-right: solid 0.1vw #c8c8c8;
+  border-bottom: solid 0.1vw #c8c8c8;
+  border-radius: 1px;
+  background-color: #797979;
+  height: 100%;
+}
+
+.inner-edge__light-buttons {
+  border-bottom: solid 0.15vw #4a4546;
+  border-right: solid 0.15vw #4a4546;
+  border-left: solid 0.15vw #c8c8c8;
+  border-top: solid 0.15vw #c8c8c8;
+  padding: 0.25vw;
+  height: 100%;
+}
+
 .inner-edge__light, .inner-edge__light__no-padding {
-  border-bottom: solid 2px #4a4546;
-  border-right: solid 2px #4a4546;
-  border-left: solid 2px #c8c8c8;
-  border-top: solid 2px #c8c8c8;
-  padding: 5px;
+  border-bottom: solid 0.2vw #4a4546;
+  border-right: solid 0.2vw #4a4546;
+  border-left: solid 0.2vw #c8c8c8;
+  border-top: solid 0.2vw #c8c8c8;
+  padding: 0.5vw;
   height: 100%;
 }
 
 .inner-edge__dark {
-  border-bottom: solid 2px #3F3D43;
-  border-right: solid 2px #3F3D43;
-  border-left: solid 2px #A7A8AE;
-  border-top: solid 2px #A7A8AE;
+  border-bottom: solid 0.2vw #3F3D43;
+  border-right: solid 0.2vw #3F3D43;
+  border-left: solid 0.2vw #A7A8AE;
+  border-top: solid 0.2vw #A7A8AE;
   height: 100%;
 }
 
 .outer-edge__dark, .outer-edge__dark__no-right-edge {
-  border-left: solid 1px #302a2a;
-  border-top: solid 1px #302a2a;
-  border-right: solid 1px #c1c2c6;
-  border-bottom: solid 1px #c1c2c6;
+  border-left: solid 0.1vw #302a2a;
+  border-top: solid 0.1vw #302a2a;
+  border-right: solid 0.1vw #c1c2c6;
+  border-bottom: solid 0.1vw #c1c2c6;
   border-radius: 1px;
   height: 100%;
 }
