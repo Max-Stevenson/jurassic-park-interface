@@ -43,7 +43,7 @@ body {
 }
 
 #main-left__container {
-  flex: 0 0 60%;
+  flex: 0 0 55%;
 }
 
 #main-right__container {
@@ -118,7 +118,7 @@ body {
   height: 100%;
 }
 
-.outer-edge__light-buttons {
+.outer-edge__light-buttons, .outer-edge__light__no-right-edge-buttons {
   border-left: solid 0.1vw #585356;
   border-top: solid 0.1vw #585356;
   border-right: solid 0.1vw #c8c8c8;
@@ -128,11 +128,11 @@ body {
   height: 100%;
 }
 
-.inner-edge__light-buttons {
-  border-bottom: solid 0.15vw #4a4546;
-  border-right: solid 0.15vw #4a4546;
-  border-left: solid 0.15vw #c8c8c8;
-  border-top: solid 0.15vw #c8c8c8;
+.inner-edge__light-buttons, .inner-edge__light__no-padding-buttons {
+  border-bottom: solid 0.1vw #4a4546;
+  border-right: solid 0.1vw #4a4546;
+  border-left: solid 0.1vw #c8c8c8;
+  border-top: solid 0.1vw #c8c8c8;
   padding: 0.25vw;
   height: 100%;
 }
@@ -154,7 +154,24 @@ body {
   height: 100%;
 }
 
+.inner-edge__dark-buttons {
+  border-bottom: solid 0.1vw #3F3D43;
+  border-right: solid 0.1vw #3F3D43;
+  border-left: solid 0.1vw #A7A8AE;
+  border-top: solid 0.1vw #A7A8AE;
+  height: 100%;
+}
+
 .outer-edge__dark, .outer-edge__dark__no-right-edge {
+  border-left: solid 0.1vw #302a2a;
+  border-top: solid 0.1vw #302a2a;
+  border-right: solid 0.1vw #c1c2c6;
+  border-bottom: solid 0.1vw #c1c2c6;
+  border-radius: 1px;
+  height: 100%;
+}
+
+.outer-edge__dark-buttons, .outer-edge__dark__no-right-edge-buttons {
   border-left: solid 0.1vw #302a2a;
   border-top: solid 0.1vw #302a2a;
   border-right: solid 0.1vw #c1c2c6;
@@ -168,12 +185,27 @@ body {
   height: 100%;
 }
 
+.inner-edge__light__no-padding-buttons {
+  padding: 0px;
+  height: 100%;
+}
+
 .outer-edge__dark__no-right-edge {
   border-right: none;
   height: 100%;
 }
 
+.outer-edge__dark__no-right-edge-buttons {
+  border-right: none;
+  height: 100%;
+}
+
 .outer-edge__light__no-right-edge {
+  border-right: none;
+  height: 100%;
+}
+
+.outer-edge__light__no-right-edge-buttons {
   border-right: none;
   height: 100%;
 }
@@ -377,6 +409,11 @@ body {
 
 .switch-vertical input ~ input:checked ~ .toggle-outside .toggle-inside {
   top: 40px;
+}
+
+#rewind-button {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
 }
 
 .tour-display__system-wrapper {

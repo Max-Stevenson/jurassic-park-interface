@@ -182,3 +182,8 @@ body {
 .switch-vertical input ~ input:checked ~ .toggle-outside .toggle-inside {
   top: 40px;
 }
+
+#rewind-button {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}

@@ -19,10 +19,10 @@
 }
 
 .inner-edge__light-buttons {
-  border-bottom: solid .15vw #4a4546;
-  border-right: solid .15vw #4a4546;
-  border-left: solid .15vw #c8c8c8;
-  border-top: solid .15vw #c8c8c8;
+  border-bottom: solid .1vw #4a4546;
+  border-right: solid .1vw #4a4546;
+  border-left: solid .1vw #c8c8c8;
+  border-top: solid .1vw #c8c8c8;
   padding: .25vw;
   height: 100%;
 }
@@ -44,7 +44,24 @@
   height: 100%;
 }
 
+.inner-edge__dark-buttons {
+  border-bottom: solid .1vw #3F3D43;
+  border-right: solid .1vw #3F3D43;
+  border-left: solid .1vw #A7A8AE;
+  border-top: solid .1vw #A7A8AE;
+  height: 100%;
+}
+
 .outer-edge__dark {
+  border-left: solid .1vw #302a2a;
+  border-top: solid .1vw #302a2a;
+  border-right: solid .1vw #c1c2c6;
+  border-bottom: solid .1vw #c1c2c6;
+  border-radius: 1px;
+  height: 100%;
+}
+
+.outer-edge__dark-buttons {
   border-left: solid .1vw #302a2a;
   border-top: solid .1vw #302a2a;
   border-right: solid .1vw #c1c2c6;
@@ -59,14 +76,32 @@
   height: 100%;
 }
 
+.inner-edge__light__no-padding-buttons {
+  @extend .inner-edge__light-buttons;
+  padding: 0px;
+  height: 100%;
+}
+
 .outer-edge__dark__no-right-edge {
   @extend .outer-edge__dark;
   border-right: none;
   height: 100%;
 }
 
+.outer-edge__dark__no-right-edge-buttons {
+  @extend .outer-edge__dark-buttons;
+  border-right: none;
+  height: 100%;
+}
+
 .outer-edge__light__no-right-edge {
   @extend .outer-edge__light;
+  border-right: none;
+  height: 100%;
+}
+
+.outer-edge__light__no-right-edge-buttons {
+  @extend .outer-edge__light-buttons;
   border-right: none;
   height: 100%;
 }
