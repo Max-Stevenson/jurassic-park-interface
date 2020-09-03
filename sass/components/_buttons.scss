@@ -4,7 +4,7 @@
 }
 
 .button-text__engraved {
-  text-shadow: 1px 1px 0px #616161, 2px 1px 0px #aeb5b5;
+  text-shadow: .15vw .1vw 0px #616161, .2vw .1vw 0px #aeb5b5;
   color: transparent;
   margin: 0;
   text-transform: uppercase;
@@ -14,12 +14,12 @@
 
 .button-text__engraved__light {
   @extend .button-text__engraved;
-  text-shadow: 3px 2px 1px #b0b4a9, 1px 1px 0.5px #666c57;
+  text-shadow: .1vw .1vw .1vw #b0b4a9, .0vw .0vw .05vw #666c57;
 }
 
 .button-text__embossed {
   color: #bfbfbf;
-  text-shadow: 1px 1px 1px #565656;
+  text-shadow: .1vw .1vw .1vw #565656;
   margin: 0;
   text-transform: uppercase;
   text-align: center;

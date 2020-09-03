@@ -1,6 +1,7 @@
 .output-display__wrapper {
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .output-display-content__wrapper {
@@ -16,14 +17,16 @@
   color: white;
   background-color: #5FD069;
   font-style: italic;
-  padding: 1px;
-  margin: 0px 5px 0px 0px;
+  padding: .1vw .25vw;
+  margin: 0 .5vw 0 0;
+  font-size: 1vw;
 }
 
 .output-display-content__content {
-  font-weight: 600;
+  font-weight: 500;
   margin: 0px;
   font-style: italic;
+  font-size: 1vw;
 }
 
 .output-display__hidden {

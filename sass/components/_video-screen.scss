@@ -20,12 +20,13 @@
 }
 
 .video-screen__loading-spinner {
-  width: 40px;
-  height: 40px;
+  width: 4vw;
+  height: 4vw;
   position: relative;
   border-radius: 50%;
   overflow: hidden;
-  border: 1px solid black;
+  border: .1vw solid black;
+  box-sizing: content-box;
 }
 
 .video-screen__loading-spinner::before,
@@ -55,19 +56,19 @@
 
 .video-screen_loading-spinner__wrapper {
   background-color: #40c14c;
-  border: 2px solid black;
+  border: .15vw solid black;
   display: flex;
   align-items: center;
   justify-content: center;
   width: fit-content;
-  padding: 5px;
-  margin-bottom: 20px;
+  padding: .5vw;
+  margin-bottom: 2vw;
 }
 
 .video-screen__text-wrapper {
   background-color: white;
-  border: 2px solid black;
-  padding: 5px;
+  border: .15vw solid black;
+  padding: .5vw 1vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -77,6 +78,7 @@
   margin: 0;
   font-style: italic;
   text-transform: uppercase;
+  font-size: 1.75vw;
 }
 
 .video-screen__hidden {
@@ -93,6 +95,9 @@
   font-style: italic;
   text-transform: uppercase;
   font-weight: bold;
+  font-size: .875vw;
+  text-align: center;
+  margin: 0;
 }
 
 @keyframes loadingSpinner {
@@ -175,9 +180,4 @@
 #contact-status {
   background-color: #148e42;
   color: white;
-}
-
-#video-screen__vehicle-img {
-  width: 335px;
-  height: 240px;
 }

@@ -238,7 +238,7 @@ body {
 }
 
 .button-text__engraved, .button-text__engraved__light {
-  text-shadow: 1px 1px 0px #616161, 2px 1px 0px #aeb5b5;
+  text-shadow: 0.15vw 0.1vw 0px #616161, 0.2vw 0.1vw 0px #aeb5b5;
   color: transparent;
   margin: 0;
   text-transform: uppercase;
@@ -247,12 +247,12 @@ body {
 }
 
 .button-text__engraved__light {
-  text-shadow: 3px 2px 1px #b0b4a9, 1px 1px 0.5px #666c57;
+  text-shadow: 0.1vw 0.1vw 0.1vw #b0b4a9, 0vw 0vw 0.05vw #666c57;
 }
 
 .button-text__embossed {
   color: #bfbfbf;
-  text-shadow: 1px 1px 1px #565656;
+  text-shadow: 0.1vw 0.1vw 0.1vw #565656;
   margin: 0;
   text-transform: uppercase;
   text-align: center;
@@ -707,12 +707,13 @@ body {
 }
 
 .video-screen__loading-spinner {
-  width: 40px;
-  height: 40px;
+  width: 4vw;
+  height: 4vw;
   position: relative;
   border-radius: 50%;
   overflow: hidden;
-  border: 1px solid black;
+  border: 0.1vw solid black;
+  box-sizing: content-box;
 }
 
 .video-screen__loading-spinner::before,
@@ -744,19 +745,19 @@ body {
 
 .video-screen_loading-spinner__wrapper {
   background-color: #40c14c;
-  border: 2px solid black;
+  border: 0.15vw solid black;
   display: flex;
   align-items: center;
   justify-content: center;
   width: fit-content;
-  padding: 5px;
-  margin-bottom: 20px;
+  padding: 0.5vw;
+  margin-bottom: 2vw;
 }
 
 .video-screen__text-wrapper {
   background-color: white;
-  border: 2px solid black;
-  padding: 5px;
+  border: 0.15vw solid black;
+  padding: 0.5vw 1vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -766,6 +767,7 @@ body {
   margin: 0;
   font-style: italic;
   text-transform: uppercase;
+  font-size: 1.75vw;
 }
 
 .video-screen__hidden {
@@ -782,6 +784,9 @@ body {
   font-style: italic;
   text-transform: uppercase;
   font-weight: bold;
+  font-size: 0.875vw;
+  text-align: center;
+  margin: 0;
 }
 
 @keyframes loadingSpinner {
@@ -865,11 +870,6 @@ body {
   color: white;
 }
 
-#video-screen__vehicle-img {
-  width: 335px;
-  height: 240px;
-}
-
 .control-panel__button-control {
   display: flex;
   flex-direction: column;
@@ -904,9 +904,14 @@ body {
   padding: 0.25vw;
 }
 
+.button-control__bottom > div {
+  background-color: #9CA193;
+}
+
 .output-display__wrapper {
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .output-display-content__wrapper {
@@ -922,14 +927,16 @@ body {
   color: white;
   background-color: #5FD069;
   font-style: italic;
-  padding: 1px;
-  margin: 0px 5px 0px 0px;
+  padding: 0.1vw 0.25vw;
+  margin: 0 0.5vw 0 0;
+  font-size: 1vw;
 }
 
 .output-display-content__content {
-  font-weight: 600;
+  font-weight: 500;
   margin: 0px;
   font-style: italic;
+  font-size: 1vw;
 }
 
 .output-display__hidden {
