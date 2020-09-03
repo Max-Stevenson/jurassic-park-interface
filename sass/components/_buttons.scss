@@ -9,6 +9,7 @@
   margin: 0;
   text-transform: uppercase;
   text-align: center;
+  font-size: 1vw;
 }
 
 .button-text__engraved__light {
@@ -22,12 +23,13 @@
   margin: 0;
   text-transform: uppercase;
   text-align: center;
+  font-size: 1vw;
 }
 
 .button__depressed {
   width: fit-content;
-  box-shadow: inset 0 0 8px #4c4c4c;
-  padding: 5px;
+  box-shadow: inset 0 0 1vw #4c4c4c;
+  padding: .25vw .75vw;
   cursor: default;
 }
 
@@ -186,4 +188,8 @@ body {
 #rewind-button {
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
+}
+
+.control-panel__button-display .inner-edge__light-buttons {
+  padding: .25vw .75vw;
 }

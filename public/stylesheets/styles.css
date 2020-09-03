@@ -243,6 +243,7 @@ body {
   margin: 0;
   text-transform: uppercase;
   text-align: center;
+  font-size: 1vw;
 }
 
 .button-text__engraved__light {
@@ -255,12 +256,13 @@ body {
   margin: 0;
   text-transform: uppercase;
   text-align: center;
+  font-size: 1vw;
 }
 
 .button__depressed {
   width: fit-content;
-  box-shadow: inset 0 0 8px #4c4c4c;
-  padding: 5px;
+  box-shadow: inset 0 0 1vw #4c4c4c;
+  padding: 0.25vw 0.75vw;
   cursor: default;
 }
 
@@ -418,6 +420,10 @@ body {
 #rewind-button {
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
+}
+
+.control-panel__button-display .inner-edge__light-buttons, .control-panel__button-display .inner-edge__light__no-padding-buttons {
+  padding: 0.25vw 0.75vw;
 }
 
 .tour-display__system-wrapper {
@@ -681,7 +687,16 @@ body {
 
 .control-panel__video-screen {
   margin-bottom: 10px;
-  flex: 0 0 248px;
+  flex: 0 0 48%;
+}
+
+#video-screen__tour {
+  display: flex;
+  flex: 1;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .video-screen {
@@ -813,7 +828,8 @@ body {
   margin: 6px 0px;
 }
 
-.power-screen__contact-position-container, .power-screen__stored-energy-container {
+.power-screen__contact-position-container,
+.power-screen__stored-energy-container {
   text-align: center;
   border-bottom: white solid 2px;
 }
