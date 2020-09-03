@@ -14,7 +14,7 @@
   justify-content: space-evenly;
   align-items: center;
   background-color: #ffffff;
-  border: solid 1px black;
+  border: solid .1vw black;
 }
 
 .white-font-black-background {
@@ -25,8 +25,8 @@
   display: flex;
   justify-self: center;
   align-self: center;
-  padding: 2px;
-  margin: 2px 0;
+  padding: .2vw .5vw;
+  font-size: 1vw;
 }
 
 #trash-icon-wrapper {
