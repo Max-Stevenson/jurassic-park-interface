@@ -6,6 +6,9 @@
   display: flex;
 }
 
+#console-display__container {
+  padding: .25vw;
+}
 .screen-container__wrapper {
   display: flex;
 }
@@ -33,43 +36,43 @@
 .outer-triangle__right {
   width: 0;
   height: 0;
-  border-top: 13px solid transparent;
-  border-left: 13px solid black;
-  border-bottom: 13px solid transparent;
+  border-top: 1vw solid transparent;
+  border-left: 1vw solid black;
+  border-bottom: 1vw solid transparent;
   position: absolute;
 }
 .inner-triangle__right {
   width: 0;
   height: 0;
-  border-top: 12px solid transparent;
-  border-left: 12px solid white;
-  border-bottom: 12px solid transparent;
+  border-top: .9vw solid transparent;
+  border-left: .9vw solid white;
+  border-bottom: .9vw solid transparent;
   position: absolute;
-  top: 1px;
+  top: .175vw;
   left: 0;
 }
 
 .buffer {
-  margin: 6px;
+  margin: .5vw;
 }
 
 .outer-triangle__left {
   width: 0;
   height: 0;
-  border-top: 18px solid transparent;
-  border-right: 18px solid black;
-  border-bottom: 18px solid transparent;
+  border-top: 1.6vw solid transparent;
+  border-right: 1.6vw solid black;
+  border-bottom: 1.6vw solid transparent;
   position: absolute;
 }
 
 .inner-triangle__left {
   width: 0;
   height: 0;
-  border-top: 17px solid transparent;
-  border-right: 17px solid white;
-  border-bottom: 17px solid transparent;
+  border-top: 1.5vw solid transparent;
+  border-right: 1.5vw solid white;
+  border-bottom: 1.5vw solid transparent;
   position: absolute;
-  left: 1px;
+  left: .15vw;
 }
 
 .island-container__wrapper {
@@ -82,14 +85,15 @@
   color: #ffffff;
   width: fit-content;
   background-color: black;
-  padding: 1px 8px 1px 8px;
+  padding: .25vw .5vw;
   font-style: italic;
   margin: 0px;
   border-radius: 1px;
+  font-size: 1vw;
 }
 
 #island-triangle {
-  margin-right: 18px;
+  margin-right: 1.5vw;
   display: flex;
   align-items: center;
 }
@@ -103,18 +107,19 @@
 .island-container__outer {
   flex: 1;
   border-radius: 1px;
-  border-top: 1px solid black;
+  border-top: .1vw solid black;
   border-left: none;
-  border-bottom: 0.5px solid #4b4b4b;
-  border-right: 0.5px solid #4b4b4b;
+  border-bottom: .05vw solid #4b4b4b;
+  border-right: .05vw solid #4b4b4b;
   margin: 0px;
 }
 
 .island-container__text {
   color: black;
   background-color: white;
-  padding: 8px 48px 8px 48px;
+  padding: .75vw;
   font-style: italic;
   margin: 0px;
   text-align: center;
+  font-size: 1.25vw;
 }
