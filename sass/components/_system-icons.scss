@@ -17,6 +17,15 @@
   border: solid .1vw black;
 }
 
+#system-icons__wrapper > img {
+  width: 4vw;
+  height: 3vw;
+}
+
+#system-icons__wrapper img {
+  height: 3vw;
+}
+
 .white-font-black-background {
   text-transform: uppercase;
   background-color: black;
@@ -27,6 +36,7 @@
   align-self: center;
   padding: .2vw .5vw;
   font-size: 1vw;
+  white-space: pre;
 }
 
 #trash-icon-wrapper {

@@ -28,6 +28,11 @@
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
+  cursor: pointer;
+}
+
+.breaker-buttons__wrapper > button {
+  cursor: pointer;
 }
 
 .breaker-label__wrapper {

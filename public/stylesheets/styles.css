@@ -290,7 +290,7 @@ body {
 
 #power-open {
   border-radius: 50%;
-  background-color: #BB0005;
+  background-color: #bb0005;
   width: 50px;
   height: 50px;
 }
@@ -312,9 +312,19 @@ body {
 
 .toggle-switch-container {
   align-content: center;
-  padding: 30px;
+  padding: 2.5vw;
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+.toggle-switch-container p {
+  color: white;
+  background: #ed1a3b;
+  text-transform: uppercase;
+  padding: 0.5vw;
+  border-radius: 20%;
+  font-size: 1vw;
 }
 
 .toggle-switch {
@@ -962,6 +972,15 @@ body {
   border: solid 0.1vw black;
 }
 
+#system-icons__wrapper > img {
+  width: 4vw;
+  height: 3vw;
+}
+
+#system-icons__wrapper img {
+  height: 3vw;
+}
+
 .white-font-black-background {
   text-transform: uppercase;
   background-color: black;
@@ -972,6 +991,7 @@ body {
   align-self: center;
   padding: 0.2vw 0.5vw;
   font-size: 1vw;
+  white-space: pre;
 }
 
 #trash-icon-wrapper {
@@ -1050,6 +1070,11 @@ body {
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
+  cursor: pointer;
+}
+
+.breaker-buttons__wrapper > button {
+  cursor: pointer;
 }
 
 .breaker-label__wrapper {

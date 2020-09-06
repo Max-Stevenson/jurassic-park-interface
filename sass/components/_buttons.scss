@@ -4,7 +4,7 @@
 }
 
 .button-text__engraved {
-  text-shadow: .15vw .1vw 0px #616161, .2vw .1vw 0px #aeb5b5;
+  text-shadow: 0.15vw 0.1vw 0px #616161, 0.2vw 0.1vw 0px #aeb5b5;
   color: transparent;
   margin: 0;
   text-transform: uppercase;
@@ -14,12 +14,12 @@
 
 .button-text__engraved__light {
   @extend .button-text__engraved;
-  text-shadow: .1vw .1vw .1vw #b0b4a9, .0vw .0vw .05vw #666c57;
+  text-shadow: 0.1vw 0.1vw 0.1vw #b0b4a9, 0vw 0vw 0.05vw #666c57;
 }
 
 .button-text__embossed {
   color: #bfbfbf;
-  text-shadow: .1vw .1vw .1vw #565656;
+  text-shadow: 0.1vw 0.1vw 0.1vw #565656;
   margin: 0;
   text-transform: uppercase;
   text-align: center;
@@ -29,7 +29,7 @@
 .button__depressed {
   width: fit-content;
   box-shadow: inset 0 0 1vw #4c4c4c;
-  padding: .25vw .75vw;
+  padding: 0.25vw 0.75vw;
   cursor: default;
 }
 
@@ -57,9 +57,9 @@
 
 #power-open {
   border-radius: 50%;
-  background-color: #BB0005;
+  background-color: #bb0005;
   width: 50px;
-  height: 50px; 
+  height: 50px;
 }
 
 .power-button__text {
@@ -80,9 +80,19 @@ body {
 
 .toggle-switch-container {
   align-content: center;
-  padding: 30px;
+  padding: 2.5vw;
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+.toggle-switch-container p {
+  color: white;
+  background: #ed1a3b;
+  text-transform: uppercase;
+  padding: 0.5vw;
+  border-radius: 20%;
+  font-size: 1vw;
 }
 
 .toggle-switch {
@@ -191,5 +201,5 @@ body {
 }
 
 .control-panel__button-display .inner-edge__light-buttons {
-  padding: .25vw .75vw;
+  padding: 0.25vw 0.75vw;
 }
