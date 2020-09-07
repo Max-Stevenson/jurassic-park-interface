@@ -277,22 +277,22 @@ body {
 #power-charge {
   border-radius: 50%;
   background-color: #f6e100;
-  width: 50px;
-  height: 50px;
+  width: 4vw;
+  height: 4vw;
 }
 
 #power-close {
   border-radius: 50%;
   background-color: #148e42;
-  width: 50px;
-  height: 50px;
+  width: 4vw;
+  height: 4vw;
 }
 
 #power-open {
   border-radius: 50%;
   background-color: #bb0005;
-  width: 50px;
-  height: 50px;
+  width: 4vw;
+  height: 4vw;
 }
 
 .power-button__text {
@@ -820,7 +820,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding-bottom: 5px;
-  border-bottom: white solid 2px;
+  border-bottom: white solid 0.1vw;
 }
 
 .power-screen__button-container button {
@@ -834,7 +834,7 @@ body {
 .power-screen__left {
   display: flex;
   flex: 1;
-  border-right: white solid 1px;
+  border-right: white solid 0.1vw;
   flex-direction: column;
 }
 
@@ -844,7 +844,8 @@ body {
 }
 
 .power-button__text {
-  margin: 6px 0px;
+  margin: 0.5vw 0px;
+  font-size: 1vw;
 }
 
 .power-screen__contact-position-container,
@@ -861,18 +862,20 @@ body {
 .power-screen__warning-text {
   color: white;
   margin: 0;
-  font-size: x-small;
-  padding-left: 10px;
-  padding-top: 5px;
+  font-size: 0.75vw;
+  padding-left: 1vw;
+  padding-top: 0.5vw;
 }
 
 .power-screen__status-text {
-  margin: 5px auto;
+  margin: 0.5vw auto;
+  font-size: 1vw;
 }
 
 #video-screen__power {
   flex: 1;
   justify-content: center;
+  height: 100%;
 }
 
 #charge-status {
