@@ -1,7 +1,7 @@
 .power-screen__breaker-container {
   display: flex;
   flex: 1;
-  margin-bottom: 5px;
+  margin-bottom: .25vw;
 }
 
 .breaker-wrapper {
@@ -51,16 +51,15 @@
 #power-display__inner > div.power-screen__votage-output-container {
   display: flex;
   justify-content: space-evenly;
+  margin-bottom: 1vw;
 }
 
 .breaker-label__text {
-  // background-color: #CDA08E;
-  // background-color: #1F1115;
   color: black;
-  font-size: 14px;
+  font-size: 1vw;
   text-transform: uppercase;
-  border: 2px solid black;
-  padding: 4px;
+  border: .2vw solid black;
+  padding: .4vw;
   background-color: darken($color: #c2a693, $amount: 50%) ; // activated
   margin: 0 auto;
 }

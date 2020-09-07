@@ -62,6 +62,7 @@ const enablePower = () => {
   ];
 
   loadInstructions(powerInstructionsArr);
+
   // Voltage toggles
   const voltageDisplay = document.getElementById("current-voltage");
   const voltageToggleInputs = document.querySelectorAll('input[type="radio"]');
@@ -86,11 +87,29 @@ const enablePower = () => {
   for (let i = 0; i < voltageToggleInputs.length; i++) {
     voltageToggleInputs[i].addEventListener("click", event => {
       updateVoltage();
+      toggleBreakerGlow(event);
     });
   }
 
   updateVoltage();
-  ////////////////////////
+  //////////////////////
+
+  // Breaker glow effect
+  const toggleBreakerGlow = (event) => {
+    let highLabel = event.target.parentElement.previousElementSibling;
+    let lowLabel = event.target.parentElement.nextElementSibling;
+    let selection = event.target.parentElement.querySelector("input:checked").classList.value.split("-")[1];
+
+    if (selection === "low") {
+      highLabel.classList.remove("breaker-active");
+      lowLabel.classList.add("breaker-active"); 
+    } else if (selection === "high") {
+      lowLabel.classList.remove("breaker-active");  
+      highLabel.classList.add("breaker-active");
+    }
+  }
+  //////////////////////
+
   // Charge code
   const chargeButton = document.getElementById("power-charge");
   const chargeStatus = document.getElementById("charge-status");
@@ -106,7 +125,7 @@ const enablePower = () => {
       chargeStatus.innerHTML = "Discharged";
     }
   });
-  ////////////////////////
+  //////////////////////
 
   // Contact code
   const closeButton = document.getElementById("power-close");
@@ -122,7 +141,7 @@ const enablePower = () => {
       initCircuitBreakers();
     }
   });
-  ////////////////////////
+  //////////////////////
 
   // Circuit Breaker Init
   const initCircuitBreakers = () => {
@@ -142,7 +161,7 @@ const enablePower = () => {
       breakerOffButtons[i].addEventListener("click", handleBreakerOff);
     }
   };
-  ////////////////////////
+  //////////////////////
 
   // Breaker On
   const handleBreakerOn = event => {
@@ -152,7 +171,7 @@ const enablePower = () => {
       "#C23457";
     event.target.style.backgroundColor = "#E40141";
   };
-  ////////////////////////
+  //////////////////////
 
   // Breaker Off
   const handleBreakerOff = event => {
@@ -163,7 +182,7 @@ const enablePower = () => {
     event.target.parentElement.nextElementSibling.style.backgroundColor =
       "#1F1115";
   };
-  ////////////////////////
+  //////////////////////
 
   // Circuit Breaker Reset
   const resetCircuitBreakers = () => {
@@ -188,7 +207,7 @@ const enablePower = () => {
       breakerOffButtons[i].removeEventListener("click", handleBreakerOff);
     }
   };
-  ////////////////////////
+  //////////////////////
 
   // Open code
   const openButton = document.getElementById("power-open");
@@ -204,7 +223,7 @@ const enablePower = () => {
     }
     resetCircuitBreakers();
   });
-  ////////////////////////
+  //////////////////////
 };
 enablePower();
 ////////////////////////
