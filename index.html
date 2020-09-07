@@ -6,12 +6,12 @@
       type="text/css"
       href="./public/stylesheets/styles.css"
     />
-    <link rel="icon" href="./public/icons/JPicon.png"/>
+    <link rel="icon" href="./public/icons/JPicon.png" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400;1,500;1,700&display=swap"
       rel="stylesheet"
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
     <div id="top-level">
@@ -214,7 +214,10 @@
                 >
                   <div class="tour-display__container">
                     <div class="tour-display__system-status__container">
-                      <div id="tour-display__wrapper-left" class="tour-display__system-wrapper">
+                      <div
+                        id="tour-display__wrapper-left"
+                        class="tour-display__system-wrapper"
+                      >
                         <h1 id="sys-one" class="tour-display__system-status">
                           SYSTEM SECURED
                         </h1>
@@ -234,7 +237,10 @@
                           </h1>
                         </div>
                       </div>
-                      <div id="tour-display__wrapper-right" class="tour-display__system-wrapper">
+                      <div
+                        id="tour-display__wrapper-right"
+                        class="tour-display__system-wrapper"
+                      >
                         <h1 id="sys-four" class="tour-display__system-status">
                           SYSTEM SECURED
                         </h1>
@@ -327,11 +333,22 @@
                       <div class="inner-edge__light__no-padding">
                         <div class="video-screen" id="video-screen">
                           <div
-                            class="video-screen__tab-content"
+                            class="video-screen__tab-content video-screen__hidden"
                             id="video-screen__vehicle"
                           >
+                            <div class="video-screen__vehicle-status__wrapper">
+                              <p class="white-font-black-background">vehicle status</p>
+                              <p class="white-font-black-background">headlights on</p>
+                            </div>
+                            <div
+                              class="video-screen_vehicle-img__wrapper"
+                            >
+                            </div>
                           </div>
-                          <div class="video-screen__tab-content" id="video-screen__tour">
+                          <div
+                            class="video-screen__tab-content"
+                            id="video-screen__tour"
+                          >
                             <div class="video-screen_loading-spinner__wrapper">
                               <div class="video-screen__loading-spinner"></div>
                             </div>
@@ -452,7 +469,7 @@
                             class="button-text__engraved__light large-button"
                             id="rewind-button"
                           >
-                          ▶▶ 
+                            ▶▶
                           </p>
                         </div>
                       </div>
@@ -491,7 +508,9 @@
                   <div class="control-panel__button-display">
                     <div class="buttons button__depressed">
                       <div class="">
-                        <p class="button-text__embossed small-button">glitches</p>
+                        <p class="button-text__embossed small-button">
+                          glitches
+                        </p>
                       </div>
                     </div>
                     <div class="outer-edge__light-buttons buttons">
@@ -572,19 +591,19 @@
                               class="output-display__wrapper output-display__hidden"
                               id="output-display__maps"
                             >
-                            <h2>Maps</h2>
+                              <h2>Maps</h2>
                             </div>
                             <div
                               class="output-display__wrapper output-display__hidden"
                               id="output-display__system"
                             >
-                            <h2>System</h2>
+                              <h2>System</h2>
                             </div>
                             <div
                               class="output-display__wrapper output-display__hidden"
                               id="output-display__emerg"
                             >
-                            <h2>Emerg.</h2>
+                              <h2>Emerg.</h2>
                             </div>
                           </div>
                         </div>
@@ -597,37 +616,26 @@
                 <div class="inner-edge__light">
                   <div id="system-icons__wrapper">
                     <p class="white-font-black-background">sys icons</p>
-                      <img
-                        src="./public/icons/hard-drive.png"
-                      />
-                      <img
-                        src="./public/icons/mini-array-one.png"
-                      />
-                      <img
-                        src="./public/icons/mini-array-two.png"
-                      />
-                      <div id="trash-icon-wrapper">
-                        <img
-                          id="trash-icon"
-                          src="./public/icons/trash.png"
-                        />
-                        <div
-                          class="outer-edge__dark modal-container modal-inactive"
-                          id="trash-modal"
-                        >
-                          <div
-                            class="inner-edge__dark modal-container__content"
-                          >
-                            <p class="modal-container__text">Test</p>
-                            <p class="modal-container__text">Test</p>
-                            <p class="modal-container__text">Test</p>
-                            <p class="modal-container__text">Test</p>
-                            <button id="modal-container__close-button">
-                              close
-                            </button>
-                          </div>
+                    <img src="./public/icons/hard-drive.png" />
+                    <img src="./public/icons/mini-array-one.png" />
+                    <img src="./public/icons/mini-array-two.png" />
+                    <div id="trash-icon-wrapper">
+                      <img id="trash-icon" src="./public/icons/trash.png" />
+                      <div
+                        class="outer-edge__dark modal-container modal-inactive"
+                        id="trash-modal"
+                      >
+                        <div class="inner-edge__dark modal-container__content">
+                          <p class="modal-container__text">Test</p>
+                          <p class="modal-container__text">Test</p>
+                          <p class="modal-container__text">Test</p>
+                          <p class="modal-container__text">Test</p>
+                          <button id="modal-container__close-button">
+                            close
+                          </button>
                         </div>
                       </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -649,8 +657,7 @@
             <div class="inner-edge__dark">
               <div class="instructions-header__container">
                 <h1>Instructions</h1>
-                <p class="instructions-text__content">
-                </p>
+                <p class="instructions-text__content"></p>
               </div>
             </div>
           </div>

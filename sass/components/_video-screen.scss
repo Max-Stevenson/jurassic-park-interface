@@ -86,9 +86,15 @@
 }
 
 #video-screen__vehicle {
-  display: flex;
+  flex: 1;
   align-items: center;
   flex-direction: column;
+  height: 100%
+}
+
+.video-screen__vehicle-status__wrapper {
+  display: flex;
+  flex: 1;
 }
 
 .video-screen__info-text {

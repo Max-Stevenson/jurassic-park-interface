@@ -309,6 +309,8 @@ for (let i = 0; i < bottomControlPanelButtons.length; i++) {
 // Video screen tab change
 const changeScreenContent = event => {
   let selectedTab = event.currentTarget.lastElementChild.firstElementChild.innerHTML.toLowerCase();
+  console.log(selectedTab);
+  
   const mainDisplayElements = document.getElementsByClassName("main-display");
   const tabContentElements = document.getElementsByClassName(
     "video-screen__tab-content"
