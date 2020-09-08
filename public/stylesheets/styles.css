@@ -459,8 +459,8 @@ body {
   flex: 1;
   justify-content: space-between;
   background-color: black;
-  background-size: 3em 3em;
-  background-image: linear-gradient(to right, white 1px, transparent 1px), linear-gradient(to bottom, white 1px, transparent 1px);
+  background: url("../../public/images/mapE.png") no-repeat center;
+  background-size: 25vw 34vw;
 }
 
 .tour-display__system-status {
