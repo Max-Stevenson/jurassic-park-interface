@@ -445,6 +445,7 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  text-align: center;
 }
 
 .tour-display__center-section {
@@ -1122,6 +1123,12 @@ body {
   width: 20px;
   height: 20px;
   outline: none;
+}
+
+#tour-display__ctrl-room-map {
+  background-color: white;
+  display: flex;
+  flex: 1;
 }
 
 /*# sourceMappingURL=styles.css.map */
