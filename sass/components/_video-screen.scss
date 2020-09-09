@@ -109,8 +109,8 @@
 .video-screen__vehicle-status__wrapper p {
   margin: 0;
   text-transform: none;
-  font-size: 1.5vw;
-  padding: 0.5vw 1vw 0 1vw;
+  font-size: 1.25vw;
+  padding: 0.25vw 1vw 0 1vw;
   font-weight: 600;
 }
 
@@ -213,7 +213,15 @@
   justify-content: space-between;
   flex: 1;
   align-items: center;
-  margin-bottom: .2vw;
+  margin-bottom: .1vw;
+}
+
+.video-screen__vehicle-img__wrapper {
+  background: url("../../public/images/vehicleGraphic.png");
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .vehicle-details__detail-container .triangle-wrapper {
@@ -265,6 +273,10 @@
   position: absolute;
   top: 0.1vw;
   left: 0;
+}
+
+#vehicle-details__tour-vehicle {
+  width: 23.75vw;
 }
 
 .video-screen__vehicle-details__left .vehicle-details__status-text {
