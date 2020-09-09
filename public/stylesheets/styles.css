@@ -801,6 +801,7 @@ body {
   display: flex;
   flex-direction: row;
   width: 100%;
+  align-items: center;
 }
 
 .video-screen__vehicle-status__wrapper {
@@ -914,6 +915,12 @@ body {
   display: flex;
   justify-content: space-between;
   flex: 1;
+  align-items: center;
+  margin-bottom: 0.2vw;
+}
+
+.vehicle-details__detail-container .triangle-wrapper {
+  align-self: end;
 }
 
 .video-screen__vehicle-details__left {
@@ -922,7 +929,21 @@ body {
 }
 
 .vehicle-status__active {
-  margin-right: 1vw;
+  margin: 0 1vw;
+  background: radial-gradient(circle, #5FC2A6, #2C7C6E, #1B5E60, #023B3A);
+  width: 1vw;
+  height: 1vw;
+  border-radius: 50%;
+  border: 0.1vw solid black;
+}
+
+.vehicle-status__inactive {
+  margin: 0 1vw;
+  background: radial-gradient(circle, #db817b, #6E5375, #725378, #473959);
+  width: 1vw;
+  height: 1vw;
+  border-radius: 50%;
+  border: 0.1vw solid black;
 }
 
 .vehicle-status__label {
@@ -932,28 +953,39 @@ body {
 .outer-triangle__right-blue {
   width: 0;
   height: 0;
-  border-top: 0.9vw solid transparent;
-  border-left: 0.9vw solid #3B6285;
-  border-bottom: 0.9vw solid transparent;
+  border-top: 0.75vw solid transparent;
+  border-left: 0.75vw solid #3B6285;
+  border-bottom: 0.75vw solid transparent;
   position: absolute;
 }
 
 .inner-triangle__right-blue {
   width: 0;
   height: 0;
-  border-top: 0.8vw solid transparent;
-  border-left: 0.8vw solid black;
-  border-bottom: 0.8vw solid transparent;
+  border-top: 0.65vw solid transparent;
+  border-left: 0.65vw solid black;
+  border-bottom: 0.65vw solid transparent;
   position: absolute;
   top: 0.1vw;
   left: 0;
 }
 
-.vehicle-details__status-text {
+.video-screen__vehicle-details__left .vehicle-details__status-text {
   margin: 0;
   border-top: 0.1vw solid #3B6285;
   border-left: 0.1vw solid #3B6285;
   border-bottom: 0.1vw solid #3B6285;
+  font-size: 0.75vw;
+}
+
+.video-screen__vehicle-details__left > div:nth-child(3) > p,
+.video-screen__vehicle-details__left > div:nth-child(4) > p {
+  background: #2F89C6;
+}
+
+.video-screen__vehicle-details__left > div:nth-child(3) > div.triangle-wrapper > div.inner-triangle__right-blue,
+.video-screen__vehicle-details__left > div:nth-child(4) > div.triangle-wrapper > div.inner-triangle__right-blue {
+  border-left: 0.65vw solid #2F89C6;
 }
 
 .control-panel__button-control {
