@@ -460,7 +460,7 @@ body {
   justify-content: space-between;
   background-color: black;
   background: url("../../public/images/mapE.png") no-repeat center;
-  background-size: 100% 100%;
+  background-size: cover;
 }
 
 .tour-display__system-status {
@@ -927,6 +927,19 @@ body {
   background-repeat: no-repeat;
 }
 
+.vide-screen__vehicle-details__right {
+  flex: 1;
+  background: url("../../public/images/explorerGraphic.png");
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #020713;
+  background-position: center;
+  border-top: 0.1vw solid #3B6285;
+  border-left: 0.1vw solid #3B6285;
+}
+
 .vehicle-details__detail-container .triangle-wrapper {
   align-self: end;
 }
@@ -934,10 +947,11 @@ body {
 .video-screen__vehicle-details__left {
   display: flex;
   flex-direction: column;
+  margin-right: 1vw;
 }
 
 .vehicle-status__active {
-  margin: 0 1vw;
+  margin: 0 0.5vw;
   background: radial-gradient(circle, #5FC2A6, #2C7C6E, #1B5E60, #023B3A);
   width: 1vw;
   height: 1vw;
@@ -946,7 +960,7 @@ body {
 }
 
 .vehicle-status__inactive {
-  margin: 0 1vw;
+  margin: 0 0.5vw;
   background: radial-gradient(circle, #db817b, #6E5375, #725378, #473959);
   width: 1vw;
   height: 1vw;
