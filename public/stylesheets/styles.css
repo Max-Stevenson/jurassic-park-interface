@@ -1309,6 +1309,8 @@ body {
   color: white;
   font-size: 0.5vw;
   font-weight: 500;
+  margin: 0;
+  padding: 0.2vw 0;
 }
 .left-wrapper__location h4, .left-wrapper__labels h4, .left-wrapper__area h4, .right-wrapper__keys h4, .right-wrapper__level h4 {
   width: 100%;
@@ -1326,6 +1328,7 @@ body {
 .left-wrapper__group, .right-wrapper__group {
   width: 100%;
   text-align: center;
+  margin: 0 0 0.5vw 0;
 }
 
 .right-wrapper__level div:last-child h4 {

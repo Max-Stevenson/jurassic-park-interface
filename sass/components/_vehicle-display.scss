@@ -47,6 +47,8 @@
     color: white;
     font-size: .5vw;
     font-weight: 500;
+    margin: 0;
+    padding: .2vw 0;
   }
 
   h4 {
@@ -67,6 +69,7 @@
 .left-wrapper__group, .right-wrapper__group {
   width: 100%;
   text-align: center;
+  margin: 0 0 .5vw  0; 
 }
 
 .right-wrapper__level div:last-child h4 {
