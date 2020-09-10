@@ -20,6 +20,7 @@
 
 .vehicle-display__centre-wrapper {
   flex: 0 0 78%;
+  padding: 0 .75vw;
 }
 
 .vehicle-display__lower-wrapper {
@@ -50,6 +51,7 @@
 
   h4 {
     width: 100%;
+    margin: 0;
   }
 }
 
@@ -69,4 +71,14 @@
 
 .right-wrapper__level div:last-child h4 {
   color: white;
+}
+
+.left-wrapper__labels {
+  background: none;
+
+  h4 {
+    border: .1vw solid black;
+    margin: .25vw 0;
+    text-align: center;
+  }
 }

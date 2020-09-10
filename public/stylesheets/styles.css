@@ -1282,6 +1282,7 @@ body {
 
 .vehicle-display__centre-wrapper {
   flex: 0 0 78%;
+  padding: 0 0.75vw;
 }
 
 .vehicle-display__lower-wrapper {
@@ -1311,6 +1312,7 @@ body {
 }
 .left-wrapper__location h4, .left-wrapper__labels h4, .left-wrapper__area h4, .right-wrapper__keys h4, .right-wrapper__level h4 {
   width: 100%;
+  margin: 0;
 }
 
 .black-font-white-background {
@@ -1328,6 +1330,15 @@ body {
 
 .right-wrapper__level div:last-child h4 {
   color: white;
+}
+
+.left-wrapper__labels {
+  background: none;
+}
+.left-wrapper__labels h4 {
+  border: 0.1vw solid black;
+  margin: 0.25vw 0;
+  text-align: center;
 }
 
 /*# sourceMappingURL=styles.css.map */
