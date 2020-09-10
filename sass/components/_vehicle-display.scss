@@ -1,0 +1,14 @@
+#vehicle-display__inner {
+  flex-direction: column;
+}
+
+.vehicle-display__upper-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
+
+.vehicle-display__lower-wrapper {
+  display: flex;
+  flex: 1;
+}

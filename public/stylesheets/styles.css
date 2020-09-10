@@ -810,12 +810,20 @@ body {
   justify-content: space-between;
 }
 
+.vehicle-details__white-dot {
+  border-radius: 50%;
+  background-color: white;
+  width: 0.5vw;
+  height: 0.5vw;
+}
+
 .video-screen__vehicle-status__wrapper p {
   margin: 0;
   text-transform: none;
   font-size: 1.25vw;
   padding: 0.25vw 1vw 0 1vw;
   font-weight: 600;
+  align-items: center;
 }
 
 .video-screen__info-text {
@@ -1247,6 +1255,21 @@ body {
 
 #tour-display__ctrl-room-map {
   background-color: white;
+  display: flex;
+  flex: 1;
+}
+
+#vehicle-display__inner {
+  flex-direction: column;
+}
+
+.vehicle-display__upper-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
+
+.vehicle-display__lower-wrapper {
   display: flex;
   flex: 1;
 }
