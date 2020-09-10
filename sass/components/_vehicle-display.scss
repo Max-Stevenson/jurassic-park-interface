@@ -2,13 +2,33 @@
   flex-direction: column;
 }
 
+.vehicle-display__left-wrapper,
+.vehicle-display__right-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
 .vehicle-display__upper-wrapper {
   display: flex;
   flex-direction: row;
-  flex: 1;
+  flex: 1 0 77%;
+  padding: 0.5vw 0;
+}
+
+.vehicle-display__centre-wrapper {
+  flex: 0 0 78%;
 }
 
 .vehicle-display__lower-wrapper {
   display: flex;
+  flex-direction: column;
   flex: 1;
+}
+
+#island-img {
+  border: solid 0.1vw #3b6285;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
