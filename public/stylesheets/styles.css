@@ -1293,7 +1293,6 @@ body {
 
 #island-img {
   border: solid 0.1vw #3b6285;
-  object-fit: cover;
   width: 100%;
   height: 100%;
 }
