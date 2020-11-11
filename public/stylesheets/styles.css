@@ -895,7 +895,7 @@ body {
 .power-screen__warning-text {
   color: white;
   margin: 0;
-  font-size: 0.75vw;
+  font-size: 0.70vw;
   padding-left: 1vw;
   padding-top: 0.5vw;
 }
@@ -1235,7 +1235,7 @@ body {
 #power-display__inner > div.power-screen__votage-output-container {
   display: flex;
   justify-content: space-evenly;
-  margin-bottom: 1vw;
+  margin-bottom: .5vw;
 }
 
 .breaker-label__text {
