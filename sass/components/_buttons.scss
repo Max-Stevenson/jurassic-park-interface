@@ -37,8 +37,14 @@
   cursor: pointer;
 }
 
+.button-control__bottom :last-child {
+  position: relative;
+}
+
 #stop-button {
-  font-size: 16px;
+  position: absolute;
+  top: -2.5%;
+  left: 35%;
 }
 
 #power-charge {
