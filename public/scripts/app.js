@@ -338,23 +338,23 @@ const changeBottomScreenContent = event => {
   let selectedTab = event.currentTarget.lastElementChild.firstElementChild.innerHTML.toLowerCase();
 
   const mainDisplayElements = document.getElementsByClassName("main-display");
-  const tabContentElements = document.getElementsByClassName(
-    "ouput-display__wrapper"
+  const outputScreenElements = document.getElementsByClassName(
+    "output-display__wrapper"
   );
-
-  for (let i = 0; i < tabContentElements.length; i++) {
-    if (tabContentElements[i].id === `video-screen__${selectedTab}`) {
-      tabContentElements[i].style.display = "flex";
-    } else {
-      tabContentElements[i].style.display = "none";
-    }
-  }
 
   for (let i = 0; i < mainDisplayElements.length; i++) {
     if (mainDisplayElements[i].id === `${selectedTab}-display__inner`) {
       mainDisplayElements[i].style.display = "flex";
     } else {
       mainDisplayElements[i].style.display = "none";
+    }
+  }
+  
+  for (let i = 0; i < outputScreenElements.length; i++) {
+    if (outputScreenElements[i].id === `output-display__${selectedTab}`) {
+      outputScreenElements[i].style.display = "flex";
+    } else {
+      outputScreenElements[i].style.display = "none";
     }
   }
 };
